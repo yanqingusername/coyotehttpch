@@ -1,0 +1,47 @@
+{layout name="layout" /}
+		<div class="login-main" style="background-image: url(__IMG_PATH__/login/login-bg.jpg);">
+			<div class="core">
+				<div class="login-box">
+					<h3>账号登录</h3>
+					
+					<div class="login-item">
+						<h4>邮箱</h4>
+						<div class="login-input">
+							<i style="background-image: url(__IMG_PATH__/login/login-icon1.png);"></i>
+							<input type="text" id="" value="" />
+						</div>
+					</div>
+					
+					<div class="login-item">
+						<h4>密码</h4>
+						<div class="login-input">
+							<i style="background-image: url(__IMG_PATH__/login/login-icon2.png);"></i>
+							<input type="password" id="" value="" />
+						</div>
+					</div>
+					
+					<div class="login-orther">
+						<div class="login-next">
+							<i></i>
+							<span>下次自动登录</span>
+						</div>
+						<a href="">忘记密码</a>
+					</div>
+					
+					<button class="login-btn" type="button">登录</button>
+					
+					<div class="to-register">
+						<i></i>
+						<span>立即注册</span>
+						<i></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			$(".login-next i").click(function() {
+				$(this).toggleClass("active")
+			})
+		</script>
+		 

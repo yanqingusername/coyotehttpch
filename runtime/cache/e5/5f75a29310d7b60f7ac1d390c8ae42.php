@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+think_serialize:a:2:{s:3:"cms";a:10:{s:6:"module";s:3:"cms";s:4:"name";s:9:"cms模块";s:4:"sign";s:32:"b19cc279ed484c13c96c2f7142e2f437";s:6:"iscore";i:0;s:7:"version";s:5:"1.0.0";s:7:"setting";s:242:"a:7:{s:15:"web_site_status";i:1;s:9:"site_name";s:9:"卡尤迪";s:10:"site_title";s:9:"卡尤迪";s:12:"site_keyword";s:13:"仪器,试剂";s:16:"site_description";s:13:"仪器,试剂";s:15:"site_cache_time";s:4:"3600";s:9:"autolinks";s:0:"";}";s:11:"installtime";s:19:"2020-08-06 09:40:27";s:10:"updatetime";i:1596678027;s:9:"listorder";i:0;s:6:"status";i:1;}s:7:"sitemap";a:10:{s:6:"module";s:7:"sitemap";s:4:"name";s:19:"sitemap网站地图";s:4:"sign";s:32:"2cd67448032301277ba60dda2c5f2740";s:6:"iscore";i:0;s:7:"version";s:5:"1.0.0";s:7:"setting";N;s:11:"installtime";s:19:"2020-08-06 09:41:19";s:10:"updatetime";i:1596678079;s:9:"listorder";i:0;s:6:"status";i:1;}}

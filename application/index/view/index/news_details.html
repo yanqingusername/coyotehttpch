@@ -1,0 +1,44 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url({$cate.imagepath});">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$cate.subpicname}</span>
+				</div>
+				<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+			</div>
+		</div>
+
+
+		<div class="article">
+			<div class="core">
+				<div class="article-top">
+					<h3>{$news.title}</h3>
+				</div>
+				
+				<div class="article-main">
+					<div class="article-side">
+						<div class="article-time">
+							<i></i>
+							<p>{$news.inputtime|date='Y.m.d'}</p>
+						</div>
+					</div>
+					<div class="article-center">
+						{$news.content|raw}
+					</div>
+					<div class="article-side jcend">
+						<!-- <a class="wx-icon" href=""></a> -->
+					</div>
+				</div>
+				<a href="{:url('news_type',['catid'=>$news['catid']])}">
+					<div class="padding-t60">
+						<div class="article-back">
+							<i></i>
+							<span>{$news.catname}</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+ 

@@ -1,0 +1,269 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url({$cate.imagepath});">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$cate.subpicname}</span>
+				</div>
+				<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+			</div>
+		</div>
+		
+		<div class="about1 wow bounceInUp">
+			<div class="core">
+				<div class="tit">
+					<div class="index1-tit">
+						<i></i>
+						<p>{$about.entitle}</p>
+					</div>
+					<div class="tit-cn">{$about.title}</div>
+				</div>
+				
+				<div class="about1-con">
+					<p>
+						{$about.content}
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="about2 wow bounceInUp">
+			<div class="about2-box1">
+				<div class="about2-box1-left">
+					<div class="left-cell">
+						<div class="tit">
+							<div class="index1-tit">
+								<i></i>
+								<p>{$about.entitle2}</p>
+							</div>
+							
+							<div class="tit-cn">{$about.title2}</div>
+						</div>
+						
+						<div class="left-p">
+							{$about.content2|raw}
+						</div>
+					</div>
+				</div>
+				<div class="about2-box1-center"></div>
+				<div class="about2-box1-right">
+					<div class="right-cell">
+						<img src="{$about.image_path2}" alt="">
+					</div>
+				</div>
+			</div>
+			
+			<div class="about2-box2">
+				<div class="about2-box2-img" style="background-image: url({$about.image_path3});"></div>
+				<div class="about2-box2-text">
+					<div class="text-cell">
+						{$about.content3|raw}
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="about3 wow bounceInUp">
+			<div class="about3-box1" style="background-image: url({$about.image_path4});">
+				<div class="core">
+					<div class="index-tit">
+						<h3>{$about.title4}</h3>
+						<p>
+							<i></i>
+							<span>{$about.entitle4}</span>
+							<i></i>
+						</p>
+					</div>
+					
+					<div class="about3-box1-p">
+						{$about.content4|raw}
+					</div>
+				</div>
+			</div>
+			
+			<div class="core">
+				<div class="about3-box2">
+					{volist name="about_data" id="item"}
+						<div class="about3-box2-item">
+							<i style="background-image: url({$item.path});"></i>
+							<h3>{$item.num}<span>{$item.unit}</span></h3>
+							<p>{$item.title}</p>
+						</div>
+					{/volist}
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="about4 wow bounceInUp">
+			<div class="core">
+				<div class="index-tit">
+					<h3>{$about.title5}</h3>
+					<p>
+						<i></i>
+						<span>{$about.entitle5}</span>
+						<i></i>
+					</p>
+				</div>
+				
+				<div class="about4-context">
+					{$about.content5|raw}
+				</div>
+				
+				<ul class="about4-list">
+					{volist name="vanguard" id="item"}
+					<li>
+						<div class="about4-img pos_rel">
+							<img src="__IMG_PATH__/about/about-img1.png" alt="" class="zwimg"><!-- 占位图 -->
+							<img src="{$item.path}" alt="" class="isimg">
+						</div>
+						<p>{$item.year}</p>
+						<p>{$item.title}</p>
+					</li>
+					{/volist}
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div class="about5 wow bounceInUp">
+			<div class="core">
+				<div class="index-tit">
+					<h3>{$about.title6}</h3>
+					<p>
+						<i></i>
+						<span>{$about.entitle6}</span>
+						<i></i>
+					</p>
+				</div>
+				
+				<div class="about5-context">
+					<p>
+						{$about.content6}
+					</p>
+				</div>
+				
+				<div class="about5-img">
+					<img src="{$about.image_path6}" alt="">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="about6 wow bounceInUp">
+			<div class="core">
+				<div class="index-tit">
+					<h3>{$about.title7}</h3>
+					<p>
+						<i></i>
+						<span>{$about.entitle7}</span>
+						<i></i>
+					</p>
+				</div>
+				
+				<div class="about6-main">
+					<div id="tag-cloud"></div>
+				</div>
+			</div>
+		</div>
+ 
+		<script src="__JS_PATH__/jquery.svg3dtagcloud.min.js"></script>
+		<script>
+			$(document).ready( function() {
+				var entries = [ 
+					{volist name="about.image7" id="item"}
+						{if $key < 4 }
+						{ label: '{$item}', url: 'javascript:;', target: '', fontSize: 28 }, 
+						{/if}
+						{if $key >= 4 && $key < 6}
+						{ label: '{$item}', url: 'javascript:;', target: '', fontSize: 22 }, 
+						{/if}
+						{if $key >= 6}
+						{ label: escape2Html('{$item}'), url: 'javascript:;', target: '', fontSize: 18 }, 
+						{/if}
+					{/volist}
+				];
+		
+		        function escape2Html(str) {
+                    var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"','#40':'(','#41':')','#39':"'",'middot':"·"};
+                    return str.replace(/&(lt|gt|nbsp|amp|quot|#40|#41|#39|middot);/ig,function(all,t){return arrEntities[t];});
+                }
+                
+				var settings = {
+					entries: entries,
+					width: 940,
+					height: 600,
+					radius: '90%',
+					radiusMin: 75,
+					bgDraw: true,
+					bgColor: '#ffffff',
+					opacityOver: 1.00,
+					opacityOut: 0.4,
+					opacitySpeed: 6,
+					fov: 800,
+					speed: 0.5,
+					fontFamily: 'Oswald, Arial, sans-serif',
+					fontColor: '#1e264a',
+					fontWeight: 'bold',//bold
+					fontStyle: 'normal',//italic 
+					fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+					fontToUpperCase: true
+				};
+		
+				//var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+				$('#tag-cloud').svg3DTagCloud( settings );
+		
+			} );
+			
+		</script>
+		
+		
+		<div class="about7 pageBg wow bounceInUp">
+			<div class="index-tit">
+				<h3>{$about.title8}</h3>
+				<p>
+					<i></i>
+					<span>{$about.entitle8}</span>
+					<i></i>
+				</p>
+			</div>
+			
+			<div class="about7-main">
+				<div class="about7-line"></div>
+				<div class="swiper-container history">
+				    <div class="swiper-wrapper">
+				    	{volist name="development" id="item"}
+							<div class="swiper-slide">
+								<i></i>
+								<em></em>
+								<div class="history-text">
+									<h3>
+										{$item.title}<span>年</span>
+										{if $item.month}
+											{$item.month}<span>月</span>
+										{/if}
+									</h3>
+									<ul>
+										{volist name="item.content" id="con"}
+											<li>{$con}</li>
+										{/volist}
+									</ul>
+								</div>
+							</div>
+						{/volist}
+						
+				    </div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			var swiper = new Swiper('.history', {
+				slidesPerView: 'auto',
+				spaceBetween: 30,
+				freeMode: true,
+				mousewheel: true,
+		    });
+		</script>
+		 

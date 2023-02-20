@@ -1,0 +1,5 @@
+<?php
+//000000003600
+ exit();?>
+think_serialize:a:22:{s:2:"id";i:54;s:7:"catname";s:21:"移动方舱实验室";s:6:"catdir";s:23:"yidongfangcangshiyanshi";s:4:"type";i:1;s:7:"modelid";i:29;s:8:"parentid";i:51;s:11:"arrparentid";s:4:"0,51";s:10:"arrchildid";s:2:"54";s:5:"child";i:0;s:5:"image";s:61:"/uploads/images/20211011/cee09cbceef8f4e1f4e8ea15458263ec.png";s:11:"description";s:152:"快速、便携、操作简单等特点大大推动了“早发现、早诊断、早治疗、早隔离”四早措施在疫情一线的规模化落地
+";s:3:"url";s:30:"/cms/index/instrument_lab.html";s:5:"items";i:1;s:7:"setting";a:4:{s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:13:"page_template";s:9:"page.html";}s:9:"listorder";i:100;s:6:"status";i:1;s:6:"imagem";i:0;s:8:"imageico";i:0;s:8:"imagecat";i:0;s:7:"picname";s:21:"移动方舱实验室";s:10:"subpicname";s:22:"FlashDetect Mobile Lab";s:13:"bottom_status";i:1;}

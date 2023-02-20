@@ -1,0 +1,270 @@
+{layout name="layout" /}
+		<div class="ny-banner insdel-banner color-495877" style="background-image: url({$cate.imagepath});">
+			<div class="core">
+				<div class="insdel-banner-text">
+					<div class="banner-en font18 big-en">
+						<i></i>
+						<span>{$cate.subpicname}</span>
+					</div>
+
+					<h3 style="font-size: 42px;" class="font-bold">{$instrument.title}</h3>
+
+					<div class="ny-banner-text">
+						{$instrument.banner_content|raw}
+					</div>
+				</div>
+
+				<div class="insdel-banner-img">
+					<img src="{$instrument.banner_thumb_path}" alt="">
+				</div>
+
+				<div class="web-loca">首页-仪器平台-仪器-{$instrument.title}</div>
+			</div>
+		</div>
+
+		<div class="insdel-tab">
+			<ul class="core">
+				<li class="active" data-id="section1">产品概述</li>
+				<li data-id="section2">解决方案</li>
+				<li data-id="section3">推荐产品</li>
+				<li data-id="section4">产品资料</li>
+			</ul>
+		</div>
+
+
+		<div class="reagent-detail" id="section1">
+			<div class="core">
+				<div class="tit">
+					<div class="index1-tit">
+						<i></i>
+						<p>Product Information</p>
+					</div>
+
+					<div class="tit-cn">产品概述</div>
+				</div>
+
+				<div class="reagent-detail-box1">
+					<h3>{$instrument.title}</h3>
+					<div class="reagent-detail-p">
+						<p>{$instrument.remark}</p>
+					</div>
+
+					<h4>产品优势:</h4>
+					
+					{volist name="instrument.tags" id="item"}
+						<ul>
+							<li>
+								<i></i><p>{$item}</p>
+							</li>
+						</ul>
+						{if  count($instrument['tags2'])>0 }
+						<p>{$instrument['tags2'][$key]}</p>
+						{/if}
+					{/volist}
+				</div>
+
+				<div class="insdel-box2">
+					<div class="insdel-box2-left">
+						<div class="insdel-box2-img">
+							<img src="{$instrument.param_thumb_path}" alt="">
+						</div>
+						<div>
+							<p>{$instrument.title}</p>
+						</div>
+					</div>
+					<style type="text/css">
+						table tr:nth-child(odd) {font-size: 18px;color: #1E254A;font-weight: 600}
+						table tr:nth-child(even) {font-size: 18px;color: rgba(30, 37, 74, 0.8);}
+						table tr:nth-child(even) td {padding-bottom: 25px;}
+					</style>
+					<div class="insdel-box2-right">
+						{notempty name="instrument.tempdata"}
+							<ul class="insdel-box2-tab">
+								<li class="active">基本参数</li>
+								<li>温控系统</li>
+							</ul>
+						{/notempty}
+						<div class="insdel-box2-con">
+							<div class="insdel-box2-cell active">
+								{$instrument.paramdata|raw}
+							</div>
+							{notempty name="instrument.tempdata"}
+								<div class="insdel-box2-cell">
+									{$instrument.tempdata|raw}
+								</div>
+							{/notempty}
+						</div>
+					</div>
+					<script>
+						var i = 0;
+						$(".insdel-box2-tab li").hover(function() {
+							i = $(this).index()
+							$(this).stop().addClass("active").siblings().stop().removeClass("active")
+							$(".insdel-box2-con .insdel-box2-cell").eq(i).stop().addClass("active").siblings().stop().removeClass(
+								"active")
+						})
+					</script>
+				</div>
+
+				{volist name="instrument.parts" id="item"}
+					<div class="insdel-box6">
+						<div class="insdel-box6-img">
+							<img src="{$item.path}" alt="">
+						</div>
+						
+						<div class="insdel-box6-right">
+							<h3>{$item.title}</h3>
+							{$item.content|raw}
+						</div>
+					</div> 
+				{/volist}
+
+				<!-- <div class="insdel-box3" id="section2">
+					<div class="index-tit">
+						<h3>配套试剂</h3>
+						<p>
+							<i></i>
+							<span>Supporting reagents</span>
+							<i></i>
+						</p>
+					</div>
+
+					<ul class="insdel-box3-list">
+						{volist name="instrument.reagent" id="item"}
+							<li>
+								<a href="{:url('index/reagent_detail',['id'=>$item['id']])}">
+									<div class="insdel-box3-img">
+										<img src="{$item.thumb_path}" alt="">
+									</div>
+									<div class="insdel-box3-name">
+										<p>{$item.title}</p>
+										<p>（{$item.test_method}）</p>
+									</div>
+								</a>
+							</li>
+						{/volist}
+					</ul>
+				</div> -->
+
+
+				<div class="insdel-box4" id="section2">
+					<div class="index-tit">
+						<h3>解决方案</h3>
+						<p>
+							<i></i>
+							<span>Solutions</span>
+							<i></i>
+						</p>
+					</div>
+
+					<ul class="insdel-box4-list">
+						{volist name="solution" id="item"}
+							<li>
+								<h3>{$item.title}</h3>
+								<p style="height: 130px">
+									{$item.remark}
+								</p>
+								<img src="{$item.recommend_path}" alt="">
+							</li>
+						{/volist}
+					</ul>
+				</div>
+
+
+				<div class="insdel-box5" id="section3">
+					<div class="index-tit">
+						<h3>推荐产品</h3>
+						<p>
+							<i></i>
+							<span>Related Products</span>
+							<i></i>
+						</p>
+					</div>
+					<div class="insdel-box5-list">
+						{volist name="instrument.recommend" id="item"}
+						<div class="insdel-box5-item">
+							<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
+								<div class="insdel-box5-img">
+									<img src="{$item.thumb_path}" alt="">
+								</div>
+								<p>{$item.title}</p>
+							</a>
+						</div>
+						{/volist}
+					</div>
+				</div>
+
+
+				<div class="product-information padding-t150" id="section4">
+					<div class="index-tit">
+						<h3>产品资料</h3>
+						<p>
+							<i></i>
+							<span>Product Resources</span>
+							<i></i>
+						</p>
+					</div>
+
+					<div class="proInfo-list">
+						{volist name="instrument.files_url" id="item"}
+							<div class="proInfo-item margin-b30">
+								<a href="{$item.path}" download="{$item.name}">
+									<div class="proInfo-item-left">
+										<i></i>
+										<p>下载</p>
+									</div>
+									<div class="proInfo-item-right line2">
+										{$item.name}
+									</div>
+								</a>
+							</div>
+						{/volist}
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<script>
+			$(document).ready(function() {
+				$(".insdel-tab ul li").click(function() {
+					var id = "#" + $(this).data("id");
+					$("html, body").animate({
+						scrollTop: $(id).offset().top + 1 + "px"
+					}, {
+						duration: 500,
+						easing: "swing"
+					});
+					return false;
+				});
+				var len1 = $("#section1").offset().top
+				var len2 = $("#section2").offset().top
+				var len3 = $("#section3").offset().top
+				var len4 = $("#section4").offset().top
+				var len5 = $("#section5").offset().top
+				
+				
+				var scroH = 0;  //滚动高度
+				$(document).scroll(function() {
+					scroH = $(document).scrollTop();  //滚动高度
+					if (scroH >= len5) {
+						$(".insdel-tab ul li").eq(4).stop().addClass("active").siblings().stop().removeClass("active")
+					} else if (scroH >= len4){
+						$(".insdel-tab ul li").eq(3).stop().addClass("active").siblings().stop().removeClass("active")
+					} else if (scroH >= len3){
+						$(".insdel-tab ul li").eq(2).stop().addClass("active").siblings().stop().removeClass("active")
+					} else if (scroH >= len2){
+						$(".insdel-tab ul li").eq(1).stop().addClass("active").siblings().stop().removeClass("active")
+					} else {
+						$(".insdel-tab ul li").eq(0).stop().addClass("active").siblings().stop().removeClass("active")
+					}
+				})
+			});
+		</script>
+		
+		
+		
+		<div class="back-top"></div>
+
+ 

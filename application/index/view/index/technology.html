@@ -1,0 +1,79 @@
+{layout name="layout" /}
+		<div class="ny-banner technology-banner" style="background-image: url({$cate.imagepath});">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$cate.subpicname}</span>
+				</div>
+				
+				<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+				
+				<div class="ny-banner-text">
+					{$cate.description}
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="technology-text wow bounceInUp">
+			<div class="core">
+				<div class="index-tit">
+					<h3>{$technology.title}</h3>
+					<p>
+						<i></i>
+						<span>{$technology.entitle}</span>
+						<i></i>
+					</p>
+				</div>
+				<div class="technology-text-p">
+					{$technology.content|raw}
+				</div>
+			</div>
+		</div>
+		
+		<div class="technology1 wow bounceInUp" style="background-image: url({$technology.image_path});">
+			<div class="core">
+				{volist name="data1" id="item"}
+					<div class="technology1-item">
+						<i></i>
+						<h3>{$item.title}</h3>
+						<p>{$item.content}</p>
+					</div>
+				{/volist}
+			</div>
+		</div>
+
+
+		<div class="technology-text wow bounceInUp">
+			<div class="core">
+				<div class="index-tit">
+					<h3>{$technology.title2}</h3>
+					<p>
+						<i></i>
+						<span>{$technology.entitle2}</span>
+						<i></i>
+					</p>
+				</div>
+				<div class="technology-text-p">
+					{$technology.content2|raw}
+				</div>
+			</div>
+		</div>
+		
+		<div class="technology2 wow bounceInUp" style="background-image: url({$technology.image_path2});">
+			<div class="core">
+				{volist name="data2" id="item"}
+				<div class="technology2-item">
+					<i style="background-image: url({$item.path});"></i>
+					<h3>{$item.title}</h3>
+					<div class="technology2-text">
+						<p>
+							{$item.content}
+						</p>
+					</div>
+				</div>
+				{/volist}
+			</div>
+		</div>
+		
+		 

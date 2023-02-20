@@ -1,0 +1,69 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url(__IMG_PATH__/contact/banner.png)">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>Contact US</span>
+				</div>
+
+				<h3 class="font46 font-bold line-height-1em">联系我们</h3>
+			</div>
+		</div>
+		<div class="contact">
+			<div class="core">
+				<div class="tit">
+					<div class="index1-tit">
+						<i></i>
+						<p>contact information</p>
+					</div>
+
+					<div class="tit-cn">联系方式</div>
+				</div>
+				
+				<div class="contact-main wow bounceInUp" style="background-image: url(__IMG_PATH__/contact/earth.png);">
+					<!-- <div class="contact-phone">
+						<i></i>
+						<div>
+							<h3>热线电话</h3>
+							<p>{:config('web_site_phone')}</p>
+						</div>
+					</div> -->
+					
+					<div class="global-distribution">
+						<div class="distribution-tit">
+							<h3><span>全 球 分 布</span><i></i></h3>
+							<p>Global distribution</p>
+						</div>
+						<div class="distribution-con">
+							<div class="distribution-item">
+								<i></i>
+								<p><span>5</span> 大洲产品覆盖</p>
+							</div>
+							<div class="distribution-item">
+								<i></i>
+								<p><span>20</span> 个区域办公室</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="wow bounceInUp">
+					{$content|raw}
+				</div>
+				
+				<div class="contact-list">
+					{volist name="mycompany" id="item"}
+						{volist name="item" id="it"}
+						<div class="contact-item wow bounceInUp">
+							<h3>{$it.title}</h3>
+							<p>{$it.address}</p>
+						</div>
+						{/volist}
+					{/volist}
+				</div>
+				
+				
+			</div>
+		</div>
+
+ 

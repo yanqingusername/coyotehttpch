@@ -1,0 +1,4 @@
+<?php
+//000000003600
+ exit();?>
+think_serialize:a:22:{s:2:"id";i:56;s:7:"catname";s:6:"搜索";s:6:"catdir";s:6:"sousuo";s:4:"type";i:1;s:7:"modelid";i:0;s:8:"parentid";i:0;s:11:"arrparentid";s:1:"0";s:10:"arrchildid";s:2:"56";s:5:"child";i:0;s:5:"image";s:62:"/uploads/images/20220114/2ef76a34add65abbb26403d793f01717.jpeg";s:11:"description";s:0:"";s:3:"url";s:30:"/cms/index/lists/catid/56.html";s:5:"items";i:0;s:7:"setting";a:4:{s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:13:"page_template";s:9:"page.html";}s:9:"listorder";i:100;s:6:"status";i:0;s:6:"imagem";i:0;s:8:"imageico";i:0;s:8:"imagecat";i:0;s:7:"picname";s:6:"搜索";s:10:"subpicname";s:0:"";s:13:"bottom_status";i:1;}

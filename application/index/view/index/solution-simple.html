@@ -1,0 +1,97 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url({$solution.path});">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$solution.entitle}</span>
+				</div>
+
+				<h3 class="font46 font-bold line-height-1em">{$solution.title}</h3>
+			</div>
+		</div>
+		
+		
+		<div class="solution-high pageBg">
+			<div class="core">
+				<div class="simple1">
+					<div class="index-tit">
+						<h3><span>分子并行反应</span><em>VS</em><span>常规反应流程</span></h3>
+						<p>
+							<i></i>
+							<span>Parallel reaction of molecules <span>VS</span> Regular reaction process</span>
+							<i></i>
+						</p>
+					</div>
+					
+					<div class="simple1-con">
+						<img src="__IMG_PATH__/solution/simple1-img.png" alt="">
+					</div>
+				</div>
+				
+				<div class="simple2">
+					<div class="index-tit">
+						<h3>操作快捷简便</h3>
+						<p>
+							<i></i>
+							<span>Quick and easy operation</span>
+							<i></i>
+						</p>
+					</div>
+					
+					<div class="simple2-con">
+						<div class="simple2-img">
+							<img src="__IMG_PATH__/solution/simple2-img.png" alt="">
+						</div>
+						
+						<div class="simple2-btn">
+							<a class="simple2-btns"><span>约1分钟即可完成</span><em></em></a>
+							<a class="simple2-btns"><span>30分钟看结果</span><em></em></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="simple3">
+					<img src="__IMG_PATH__/solution/simple3-img.png" >
+				</div>
+				
+				<div class="about-product">
+					<div class="index-tit">
+						<h3>相关产品</h3>
+						<p>
+							<i></i>
+							<span>Related Products</span>
+							<i></i>
+						</p>
+					</div>
+					
+					<div class="insdel-box5-list">
+						{volist name="solution.recommend" id="item"}
+						<div class="insdel-box5-item">
+							<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
+								<div class="insdel-box5-img">
+									<img src="{$item.thumb_path}" alt="">
+								</div>
+								<p>{$item.title}</p>
+							</a>
+						</div>
+						{/volist}
+					</div>
+					<!-- <ul class="about-prolist">
+						{volist name="solution.recommend" id="item"}
+							<li>
+								<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
+									<div class="about-proimg">
+										<img src="{$item.thumb_path}" alt="">
+									</div>
+									<div class="about-proname">
+										<p>{$item.title}</p>
+									</div>
+								</a>
+							</li>
+						{/volist}
+					</ul> -->
+				</div>
+			</div>
+		</div>
+	
+ 

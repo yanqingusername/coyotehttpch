@@ -1,0 +1,73 @@
+{extend name="admin@index_layout"/}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-header">联动菜单管理</div>
+    <div class="layui-card-body">
+        <div class="layui-form">
+            <table class="layui-hide" id="table" lay-filter="table"></table>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="toolbarDemo">
+    <div class="layui-btn-container">
+      <a class="layui-btn layui-btn-sm" href="{:url('wadd',["parentid"=>$pid])}">新增栏目</a>
+      {if $level>0&&$level<=3}
+        <a class="layui-btn layui-btn-xs" href='{:url("index")}?menuid=129&pid={$parentid}'>返回上级</a>
+      {/if}
+    </div>
+</script>
+<script type="text/html" id="barTool">
+
+    {{# if(d.level<3){ }}
+        <a href='{:url("index")}?menuid=129&pid={{ d.id }}' class="layui-btn layui-btn-xs">查看下级</a>
+        <a href="{{d.add_url}}" class="layui-btn layui-btn-xs layui-btn-normal">添加下级</a>
+    {{# } }}
+    
+    <a href='{:url("edit")}?id={{ d.id }}' class="layui-btn layui-btn-xs">编辑</a>
+    <a href='{:url("delete")}?id={{ d.id }}' class="layui-btn layui-btn-danger layui-btn-xs layui-tr-del">删除</a>
+</script>
+<script type="text/html" id="statusTpl">
+    <input type="checkbox" name="status" data-href="{:url('setstate')}?id={{d.id}}" value="{{d.id}}" lay-skin="switch" lay-text="显示|隐藏" lay-filter="switchStatus" {{ d.status==1 ? 'checked' : '' }}>
+</script>
+{/block}
+{block name="script"}
+<script>
+layui.use('table', function() {
+    var table = layui.table,
+        $ = layui.$,
+        form = layui.form;
+    table.render({
+        elem: '#table',
+        toolbar: '#toolbarDemo',
+
+        url: '{:url("index")}?pid={$pid}',
+        cols: [
+            [
+                { field: 'listorder', width: 70, title: '排序', edit: 'text' },
+                { field: 'id', width: 70, title: 'ID' },
+                { field: 'catname', title: '名称' },
+                { field: 'level', title: '层级' },
+                { field: 'catdir', width: 120, title: '唯一标识' },
+                { field: 'type',width: 100, title: '类型',templet: '<div>{{#  if(d.type==1){ }} 单页 {{#  } else if(d.type==2){  }} 列表 {{#  } else if(d.type==3){ }} 链接 {{#  } else { }} 未知 {{#  } }}</div>' },
+                { field: 'status',  width: 100,align:"center", title: '状态',  templet: '#statusTpl', unresize: true },
+                { fixed: 'right', width: 400, title: '操作', toolbar: '#barTool' }
+            ]
+        ],
+    });
+
+    //监听单元格编辑
+    table.on('edit(table)', function(obj) {
+        var value = obj.value,data = obj.data;
+        $.post('{:url("cms/city/listorder")}', { 'id': data.id,'value':value }, function(data) {
+            if (data.code == 1) {
+                layer.msg(data.msg);
+            }else{
+                layer.msg(data.msg);
+            }
+
+        })
+    });
+
+});
+</script>
+{/block}

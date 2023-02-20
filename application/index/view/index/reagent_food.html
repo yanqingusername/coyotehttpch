@@ -1,0 +1,54 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url({$cate.imagepath});">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$cate.subpicname}</span>
+				</div>
+
+				<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+				
+				<div class="ny-banner-text">
+					{$cate.description|raw}
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="reagent-food">
+			<div class="core">
+				<div class="index-tit">
+					<h3>食品检测试剂盒</h3>
+					<p>
+						<i></i>
+						<span>Food inspection test kit</span>
+						<i></i>
+					</p>
+				</div>
+					
+				<div class="reagent-food-list">
+					<ul>
+						{volist name="reagentdata" id="item"}
+						<li>
+							<a>
+								<div class="reagent-food-img"><img src="{$item.thumb_path}" alt=""></div>
+								<div class="reagent-food-text">
+									<p>{$item.title}</p>
+									<p>{if $item['test_method']}（{$item['test_method']}）{/if}</p>
+								</div>
+							</a>
+						</li>
+						{/volist}
+					</ul>
+				</div>
+				
+				
+				<div class="news-page">
+					<a class="page-prev" href="{:$reagentdata->url($page-1)}"></a>
+					<div><span>{$page}</span>/{$reagentdata->lastPage()}</div>
+					<a class="page-next" href="{:$reagentdata->url( $page<$reagentdata->lastPage()?$page+1:$reagentdata->lastPage() )}"></a>
+				</div>
+			</div>
+		</div>
+	
+

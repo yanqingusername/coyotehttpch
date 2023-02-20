@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>卡尤迪生物</title>
+		<meta name="keywords" content="{$seo.meta_keywords}">
+		<meta name="description" content="{$seo.meta_description}">
+		<link rel="icon" type="image/x-icon" href="icon.png" />
+		<link rel="stylesheet" href="__CSS_PATH__/swiper.min.css" />
+		<link rel="stylesheet" href="__CSS_PATH__/common.css" />
+		<link rel="stylesheet" href="__CSS_PATH__/style.css" />
+		<script type="text/javascript" src="__JS_PATH__/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="__JS_PATH__/wow.min.js"></script>
+		<script type="text/javascript" src="__JS_PATH__/script.js"></script>
+	</head>
+	<style type="text/css">
+		.index1-p{
+			font-size: 20px;
+		    line-height: 32px;
+		    color: #4F526A;
+		    margin-bottom: 60px;
+		    text-align: justify;
+		}
+	</style>
+	<body>
+		<div class="banner" style="background-image: url({$cate.imagepath});">
+			<div class="header">
+				<div class="core">
+					<div class="logo">
+						<a href="index.html"><img src="{:config('web_site_logo')}" alt=""></a>
+					</div>
+					
+					<div class="nav">
+						{volist name="menu" id="item"}
+							<div class="nav-item {if $item.active}active{/if}">
+								<p>
+									<a href="{:url($item['url'])}">{$item.catname}</a>
+									{if $item['sub']}
+									<i></i>
+									{/if}
+								</p>
+								{if $item['sub']}
+									<div class="nav-two">
+										<div class="core">
+											{volist name="item.sub" id="sub1"}
+												<dl>
+													<dt><a href="{:url($sub1['url'])}">{$sub1.catname}</a></dt>
+													{if $sub1['sub']}
+														{volist name="sub1.sub" id="sub2"}
+															<dd><a href="{:url($sub1['sub_url'],['id'=>$sub2['id']])}">{$sub2.title}</a></dd>
+														{/volist}
+													{/if}
+												</dl>
+											{/volist} 
+										</div>
+									</div>
+								{/if}
+							</div>
+						{/volist}
+					</div>
+				
+					<div class="header-search">
+						<a href="{:url('search')}"></a>
+					</div>
+					
+					<div class="lang">
+						<div style="display: flex; align-items: center;">
+							<i></i><span>中文</span>
+						</div>
+						<div class="other-lang">
+							<a class="other-lang-item" href="http://en.coyotebio.com/">
+								<span>EN</span>
+							</a>
+    						<!--<a class="other-lang-item" href="https://coyotebio.com.tr/">
+    							<span>TUR</span>
+    						</a>-->
+						</div>
+					</div>
+					
+					<!-- <div class="search">
+						<i></i>
+					</div>
+					
+					<div class="search-box">
+						<input type="text" id="" value="" />
+						<button type="button">搜索</button>
+					</div> -->
+				</div>
+			</div>
+			
+			<!-- <div class="ibanner-text core color-495877">
+				<h3 class="font80">{$cate.picname}</h3>
+				<h4 class="font40">{$cate.subpicname}</h4>
+				<p class="font40 big-en">{$cate.description|raw}</p>
+			</div> -->
+		</div>
+		
+		
+		<div class="main">
+			<div class="index1">
+				<div class="core">
+					{volist name="solution" id="item"}
+					<div class="index1-item wow bounceInUp">
+						{if $key==1}
+						<div class="index1-text">
+							<div class="index1-tit">
+								<i></i>
+								<p>{$item.entitle}</p>
+							</div>
+							<h3>{$item.title}</h3>
+							<div class="index1-p">
+								{$item.remark}
+							</div>
+							
+							<a class="index-more" href="{:url('solution_info',['id'=>$item['id']])}">
+								<span>进一步了解</span><em></em>
+							</a>
+						</div>
+						<div class="index1-img">
+							<img src="{$item.path}" alt="">
+						</div>
+						{else /}
+						<div class="index1-img">
+							<img src="{$item.path}" alt="">
+						</div>
+						
+						<div class="index1-text">
+							<div class="index1-tit">
+								<i></i>
+								<p>{$item.entitle}</p>
+							</div>
+							<h3>{$item.title}</h3>
+							<div class="index1-p">
+								{$item.remark}
+							</div>
+							
+							<a class="index-more" href="{:url('solution_info',['id'=>$item['id']])}">
+								<span>进一步了解</span><em></em>
+							</a>
+						</div>
+						{/if}
+					</div>
+					{/volist}
+					  
+					
+					<div class="index1-item index-about wow bounceInUp">
+						<div class="index1-text">
+							<div class="index1-tit">
+								<i></i>
+								<p>{$index.entitle}</p>
+							</div>
+							<h3>{$index.title}</h3>
+							<div class="index1-p">
+								{$index.aboutcontent}
+							</div>
+							
+							<a class="index-more" href="{:url('about')}"><span>进一步了解</span><em></em></a>
+						</div>
+						<div class="colorbox"></div>
+					</div>
+					
+					
+					<div class="index-story wow bounceInUp">
+						<div class="index1-text">
+							<div class="index1-tit">
+								<i></i>
+								<p>{$index.entitle2}</p>
+							</div>
+							<h3><span>{$index.title2}</span><i class="play-btn"></i></h3>
+						</div>
+						<div class="index-story-img">
+							<img src="{$index.path}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="video-mask">
+				<video id="video" controls>
+					<source src="{$index.video_path}" type="video/mp4">
+				</video>
+				<div class="video-close"></div>
+			</div>
+			
+			<script>
+				$(".play-btn").click(function() {
+					$(".video-mask").stop().css("display","flex")
+					$("#video")[0].play()
+				})
+				$(".video-close").click(function() {
+					$("#video")[0].pause()
+					$(".video-mask").stop().hide()
+				})
+			</script>
+			
+			
+			<div class="index-product wow bounceInUp" style="background-image: url(__IMG_PATH__/index/product-bg.png);">
+				<div class="core">
+					<div class="ipro-img" style="background-image: url({$instrument.index_path});">
+				      	<i class="bor-left"></i>
+				      	<i class="bor-right"></i>
+				    </div>
+					<div class="ipro-text">
+						<h3>{$instrument.title}</h3>
+						<div class="index1-p">
+							{$instrument.remark}
+						</div>
+						
+						<a class="index-more" href="{:url('index/instrument_detail',['id'=>$instrument.id])}">
+							<span>进一步了解</span><em></em>
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			
+			
+			<div class="index-news padding-t200 wow bounceInUp">
+				<div class="core">
+					<div class="index-tit">
+						<h3>新闻动态</h3>
+						<p>
+							<i></i>
+							<span>NEWS</span>
+							<i></i>
+						</p>
+					</div>
+					
+					<div class="inew-list padding-t80">
+						{volist name="news" id="item"}
+						<div class="inew-item">
+							<a href="{:url('index/news_details',['id'=>$item['id']])}">
+								<h3 class="line2">{$item.title}</h3>
+								<p><span>{$item.inputtime|date='Y.m.d'}</span> <em></em> <span>News</span></p>
+							</a>
+						</div>
+						{/volist}
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="index-cooperative pageBg wow bounceInUp">
+				<div class="core">
+					<div class="index-tit">
+						<h3>权威认证</h3>
+						<p>
+							<i></i>
+							<span>Regulatory Authorities</span>
+							<i></i>
+						</p>
+					</div>
+					
+					<div class="icooperative-main">
+						{volist name="cooperation" id="item"}
+							<a>
+						       	<i style="background-image: url({$item.path});"></i>
+						       	<p>{$item.title}</p >
+					      	</a>
+						{/volist}
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="footer padding-t115 padding-b140">
+			<div class="core">
+				<div class="footer-main">
+					<div class="footer-logo"><img src="{:config('web_bottom_logo')}" alt=""></div>
+					{volist name="mycompany" id="item"}
+						<div class="footer-info">
+							{volist name="item" id="it"}
+								<div class="finfo-item">
+									<p>{$it.title}</p>
+									<p>地址：{$it.address}</p>
+									<p>{if $it.phone}办公电话：{$it.phone}{/if}&nbsp;</p>
+									<p>{if $it.email}邮箱：{$it.email}{/if}&nbsp;</p>
+								</div>
+							{/volist}
+						</div>
+					{/volist}
+				</div>
+				
+				<div class="footer-main">
+					<div class="footer-logo"> </div>
+					<div class="footer-info">
+						<div class="finfo-item">
+							<p style="font-size: 20px">客服电话：{:config('web_site_phone')}</p> 
+						</div>
+					</div>
+					<div class="footer-info"> </div>
+				</div>
+				<div class="footer-bottom">
+					<div class="flex-shrink0 padding-r20">
+						<div class="fewm">
+							<img src="{:config('web_bottom_qrcode')}" alt="">
+						</div>
+					</div>
+					<div class="flex1 ohidden">
+						<div class="fb-p text-right">
+							<p>{:config('web_site_icp')}</p>
+							<p>
+								{volist name="bottom_menu" id="item"}
+									<a href="{:url($item['url'])}">{$item.catname}</a>
+									{if count($bottom_menu) != $key+1}
+									<em>/</em>
+									{/if}
+								{/volist}
+								<em>/</em>
+								<a href="{:url('index/login')}">服务支持</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script>
+			$(document).scroll(function(){
+				var scroH = $(document).scrollTop();
+				var HH = $(".header").height();
+				if (scroH >= HH) {
+					$(".header").stop().addClass("head-active")
+				} else{
+					$(".header").stop().removeClass("head-active")
+				}
+			})
+		</script>
+	</body>
+</html>

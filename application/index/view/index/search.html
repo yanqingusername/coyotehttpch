@@ -1,0 +1,50 @@
+{layout name="layout" /}
+<div class="ny-banner color-495877 solution-banner" style="background-image: url({$cate.imagepath});">
+	<div class="core">
+		<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+		<div class="ny-banner-text">{$cate.description}</div>
+	</div>
+</div>
+
+
+<div class="search">
+	<div class="core">
+		<h2 class="font-bold line-height-1em">搜索结果</h2>
+		<form method="get" action="">
+			<div class="search-from">
+				<p>搜索</p>
+				<input type="text" id="search" value="{$key_word}" name="key_word" />
+				<button class="search-btn" type="submit"></button>
+			</div>
+		</form>
+		<div class="search-list">
+			{volist name="list" id="item"}
+			<a class="search-list-item" target="_blank" href="{:url($item['type'],['id'=>$item['id']])}">
+				<div class="search-item-tip">{:$item['type'] == 'news_details'?'新闻中心':'产品'}</div>
+				<div class="search-item-text">
+					<h3>{$item['title']}</h3>
+					<p>{$item['remark']}</p>
+				</div>
+			</a>
+			{/volist}
+		</div>
+	</div>
+</div>
+
+
+<script>
+ $(function(){
+	// $(".search-btn").click(function(){
+		//关键字变色
+		var searchText = $("#search").val();//获取你输入的关键字
+		var regExp = new RegExp(searchText, "g");//创建正则表达式,g表示全局的,如果不用g,则查找到第一个就不会继续向下查找了
+		$(".search-list .search-list-item").each(function()//遍历h3里的文字;
+		{
+			var html = $(this).find(".search-item-text p").html();
+			var newHtml = html.replace(regExp, "<span style='color:#C40340'>"+searchText+"</span>");//将找到的关键字替换,加上highlight属性;	
+			$(this).find(".search-item-text p").html(newHtml);//更新文章;
+	 
+		});
+	// })
+})
+</script>

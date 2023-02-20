@@ -1,0 +1,109 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url({$cate.imagepath})">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$cate.subpicname}</span>
+				</div>
+
+				<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+
+				<div class="banner-text">
+					{$cate.description|raw}
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="join1 wow bounceInUp">
+			<div class="core">
+				<div class="index-tit">
+					<h3>{$joinus.title}</h3>
+					<p>
+						<i></i>
+						<span>{$joinus.entitle}</span>
+						<i></i>
+					</p>
+				</div>
+
+				<a class="join1-main" href="{:url('index/join_position')}">
+					<div class="join1-item" style="background-image: url({$joinus.image1_path});">
+						<h3>{$joinus.recruit1}</h3>
+						<div class="join1-text">
+							<p>{$joinus.recruit_content1}</p>
+							<p>{$joinus.recruit_remark1}</p>
+						</div>
+					</div>
+					<div class="join1-item" style="background-image: url({$joinus.image2_path});">
+						<h3>{$joinus.recruit2}</h3>
+						<div class="join1-text">
+							<p>{$joinus.recruit_content2}</p>
+							<p>{$joinus.recruit_remark2}</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="join2 wow bounceInUp">
+			<div class="core">
+				<img src="{$joinus.thumb_path}" alt="">
+			</div>
+		</div>
+
+		<div class="join3 pageBg wow bounceInUp">
+			<div class="core">
+				<div class="tit">
+					<div class="index1-tit">
+						<i></i>
+						<p>{$joinus.entitle2}</p>
+					</div>
+
+					<div class="tit-cn">{$joinus.title2}</div>
+				</div>
+				
+				<div class="join3-swiper">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							{volist name="join_data" id="item"}
+							<div class="swiper-slide">
+								<div class="join3-box">
+									<h3>{$item.title}</h3>
+									<div class="join3-text">
+										<div class="join3-p1">
+											<p>{$item.content1}</p>
+											<p>{$item.content2}</p>
+										</div>
+										<div class="join3-p2">
+											{$item.content3}
+										</div>
+									</div>
+									<!-- <div class="join3-ren" style="background-image: url({$item.path});"></div> -->
+								</div>
+							</div>
+							{/volist}
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+		</div>
+ 
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.join3-swiper .swiper-container', {
+				loop: true,
+				// autoplay: {
+				// 	delay: 2500,
+				// 	disableOnInteraction: false,
+				// },
+				navigation: {
+					nextEl: '.join3-swiper .swiper-button-next',
+					prevEl: '.join3-swiper .swiper-button-prev',
+				},
+			});
+		</script>
+
+ 

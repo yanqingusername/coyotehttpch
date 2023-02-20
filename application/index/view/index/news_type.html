@@ -1,0 +1,94 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url({$cate.imagepath});">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$cate.subpicname}</span>
+				</div>
+				
+				<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+			</div>
+		</div>
+		
+		<div class="news2 padding-t120">
+			<div class="core">
+				<div class="news-tab padding-b70">
+					<ul class="news-tab-left font24">
+						{volist name="news_type" id="item"}
+							<li {eq name="item.id" value="$catid"} class="active"{/eq}><a href="{:url('news_type',['catid'=>$item['id']])}">{$item.catname}</a></li>
+						{/volist}
+					</ul>
+					<!-- <div class="news-all font24">
+						<a href="{:url('news')}">
+							<span>全部</span>
+							<i></i>
+						</a>
+					</div> -->
+				</div>
+				
+				{if $catid == 37}
+					<div class="news1-list">
+						{volist name="news" id="item"}
+						<div class="news1-item">
+							<div class="news1-info">
+								<h4 class="font18 color-797F9C">{$item.inputtime|date='Y.m.d'}</h4>
+								<h3 class="font30">{$item.title}</h3>
+								<a class="index-more" href="{:url('news_details',['id'=>$item['id']])}"><span>进一步了解</span><em></em></a>
+							</div>
+							<div class="news-img" style="background-image: url({$item.path});"></div>
+						</div>
+						{/volist}
+					</div>
+				{/if}
+				{if $catid == 38}
+					<div class="news2-list">
+						{volist name="news" id="item"}
+						<div class="news2-item">
+							<a href="{:url('news_details',['id'=>$item['id']])}">
+								<h4>{$item.inputtime|date='Y.m.d'}</h4>
+								<div class="flex-row align_icen">
+									<p class="flex1 line1">{$item.title}</p>
+									<i></i>
+								</div>
+							</a>
+						</div>
+						{/volist}
+					</div>
+				{/if}
+				{if $catid == 39}
+					<div class="video-list">
+						{volist name="news" id="item"}
+						<div class="video-item">
+							<a href="{:url('news_details',['id'=>$item['id']])}">
+								<div class="video-img">
+									<img src="__IMG_PATH__/news/video-zw.png" alt="" class="zwimg"><!-- 占位图 -->
+									<img src="{$item.path}" alt="" class="isimg">
+									<div class="play-icon"></div>
+								</div>
+								<div class="video-time">{$item.inputtime|date='Y.m.d'}</div>
+								<div class="video-text">
+									{$item.title}
+								</div>
+								<div class="video-from">
+									来源：{$item.resume|default="无"}
+								</div>
+								<div class="video-arrow">
+									<i></i>
+								</div>
+							</a>
+						</div>
+						{/volist}
+					</div>
+				{/if}
+
+
+				<div class="news-page">
+					<a class="page-prev" href="{:url('news_type',['catid'=>$catid,'page'=>$page>1?$page-1:1])}"></a>
+					<div><span>{$page}</span>/{$news->lastPage()}</div>
+					<a class="page-next" href="{:url('news_type',['catid'=>$catid,'page'=>($page<$news->lastPage()?$page+1:$news->lastPage())])}"></a>
+				</div>
+				
+			</div>
+		</div>
+		
+		 

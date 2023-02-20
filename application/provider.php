@@ -1,0 +1,33 @@
+<?php
+
+
+return [
+    //'route'      => \think\Route::class,
+    'CategoryModel' => 'app\api\model\Category',
+    'PictureModel' => 'app\api\model\Picture',
+    'ProductModel' => 'app\api\model\Product',
+    'OtherModel' => 'app\api\model\Other',
+    'ArticleModel' => 'app\api\model\Article',
+    'SocietyModel' => 'app\api\model\Society',
+    'NewsModel' => 'app\api\model\News',
+    'FundModel' => 'app\api\model\Fund',
+    'AttachmentModel' => 'app\api\model\Attachment',
+    'MemberModel' => 'app\api\model\Member',
+    'DownloadModel' => 'app\api\model\Download',
+    'ShopModel' => 'app\api\model\Shop',
+    'TestModel' => 'app\api\model\Test',
+    'IndexModel' => 'app\api\model\Index',
+    'ImageModel' => 'app\api\model\Image',
+    'FileModel' => 'app\api\model\File',
+    'CommonlistModel' => 'app\api\model\Commonlist',
+    'CelebrityModel' => 'app\api\model\Celebrity',
+    'ImagesModel' => 'app\api\model\Images',
+    'HousetypeModel' => 'app\api\model\Housetype',
+    'EventsModel' => 'app\api\model\Events',
+    'ActivitytimeModel' => 'app\api\model\Activitytime',
+    'CommontitleModel' => 'app\api\model\Commontitle',
+    'VideoModel' => 'app\api\model\Video',
+    'ScenicspotModel' => 'app\api\model\Scenicspot',
+    'ScenicareaModel' => 'app\api\model\Scenicarea',
+    'ExpertModel' => 'app\api\model\Expert',
+];

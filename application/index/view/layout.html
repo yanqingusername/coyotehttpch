@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>卡尤迪生物</title>
+		<meta name="keywords" content="{$seo.meta_keywords}">
+		<meta name="description" content="{$seo.meta_description}">
+		<link rel="icon" type="image/x-icon" href="icon.png" />
+		<link rel="stylesheet" href="__CSS_PATH__/swiper.min.css" />
+		<link rel="stylesheet" href="__CSS_PATH__/common.css" />
+		<link rel="stylesheet" href="__CSS_PATH__/style.css" />
+		<script type="text/javascript" src="__JS_PATH__/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="__JS_PATH__/wow.min.js"></script>
+		<script type="text/javascript" src="__JS_PATH__/script.js"></script>
+		<script type="text/javascript" src="__JS_PATH__/swiper.min.js"></script>
+	</head>
+	<body>
+		<!-- 头部 开始 -->
+		<div class="header ny-header">
+			<div class="core">
+				<div class="logo">
+					<a href="index.html"><img src="{:config('web_site_logo')}" alt=""></a>
+				</div>
+				
+				<div class="nav">
+					{volist name="menu" id="item"}
+						<div class="nav-item {if $item.active}active{/if}">
+							<p>
+								<a href="{:url($item['url'])}">{$item.catname}</a>
+								{if $item['sub']}
+								<i></i>
+								{/if}
+							</p>
+							{if $item['sub']}
+								<div class="nav-two">
+									<div class="core">
+										{volist name="item.sub" id="sub1"}
+											<dl>
+												<dt><a href="{:url($sub1['url'])}">{$sub1.catname}</a></dt>
+												{if $sub1['sub']}
+													{volist name="sub1.sub" id="sub2"}
+														<dd><a href="{:url($sub1['sub_url'],['id'=>$sub2['id']])}">{$sub2.title}</a></dd>
+													{/volist}
+												{/if}
+											</dl>
+										{/volist} 
+									</div>
+								</div>
+							{/if}
+						</div>
+					{/volist}
+				</div>
+				
+				<div class="header-search">
+					<a href="{:url('search')}"></a>
+				</div>
+				
+				<div class="lang">
+					<div style="display: flex; align-items: center;">
+						<i></i><span>中文</span>
+					</div>
+					<div class="other-lang">
+						<a class="other-lang-item" href="http://en.coyotebio.com/">
+							<span>EN</span>
+						</a>
+						<!--<a class="other-lang-item" href="https://coyotebio.com.tr/">
+							<span>TUR</span>
+						</a>-->
+					</div>
+				</div>
+				
+				<!-- <div class="search">
+					<i></i>
+				</div>
+					
+				<div class="search-box">
+					<input type="text" id="" value="" />
+					<button type="button">搜索</button>
+				</div> -->
+			</div>
+		</div>
+		
+		<div class="head-wall"></div>
+		<!-- 内页头部 结束 -->
+ 
+		{__CONTENT__} 
+
+		<div class="footer padding-t115 padding-b140">
+			<div class="core">
+				<div class="footer-main">
+					<div class="footer-logo"><img src="{:config('web_bottom_logo')}" alt=""></div>
+					{volist name="mycompany" id="item"}
+						<div class="footer-info">
+							{volist name="item" id="it"}
+								<div class="finfo-item">
+									<p>{$it.title}</p>
+									<p>地址：{$it.address}</p>
+									<p>{if $it.phone}办公电话：{$it.phone}{/if}&nbsp;</p>
+									<p>{if $it.email}邮箱：{$it.email}{/if}&nbsp;</p>
+								</div>
+							{/volist}
+						</div>
+					{/volist}
+				</div>
+
+				<div class="footer-main">
+					<div class="footer-logo"> </div>
+					<div class="footer-info">
+						<div class="finfo-item">
+							<p style="font-size: 20px">客服电话：{:config('web_site_phone')}</p> 
+						</div>
+					</div>
+					<div class="footer-info"> </div>
+				</div>
+				
+				<div class="footer-bottom">
+					<div class="flex-shrink0 padding-r20">
+						<div class="fewm">
+							<img src="{:config('web_bottom_qrcode')}" alt="">
+						</div>
+					</div>
+					<div class="flex1 ohidden">
+						<div class="fb-p text-right">
+							<p>{:config('web_site_icp')}</p>
+							<p>
+								{volist name="bottom_menu" id="item"}
+									<a href="{:url($item['url'])}">{$item.catname}</a>
+									{if count($bottom_menu) != $key+1}
+									<em>/</em>
+									{/if}
+								{/volist}
+								<em>/</em>
+								<!--<a href="{:url('index/login')}">服务支持</a>-->
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>  
+</html> 
+

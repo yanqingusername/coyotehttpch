@@ -1,0 +1,119 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url({$cate.imagepath});">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$cate.subpicname}</span>
+				</div>
+
+				<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+			</div>
+		</div>
+
+
+		<div class="main">
+			<div class="core">
+				<div class="news-section1 wow bounceInUp">
+					<div class="tit margin-b70">
+						<div class="index1-tit">
+							<i></i>
+							<p>{$news.0.subpicname}</p>
+						</div>
+						<div class="tit-cn">{$news.0.catname}</div>
+					</div>
+					<div class="swiper-container new-scroll">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								{volist name="$news.0.data" id="item"}
+								<div class="news1-item">
+									<div class="news1-info">
+										<h4 class="font18 color-797F9C">{$item.inputtime|date='Y.m.d'}</h4>
+										<h3 class="font30">{$item.title}</h3>
+										<a class="index-more" href="{:url('news_details',['id'=>$item['id']])}">
+											<span>进一步了解</span><em></em>
+										</a>
+									</div>
+									<div class="news-img" style="background-image: url({$item.path});"></div>
+								</div>
+								{/volist}
+							</div>
+						</div>
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+				
+				
+				<div class="news-section2 wow bounceInUp">
+					<div class="tit margin-b70">
+						<div class="index1-tit">
+							<i></i>
+							<p>{$news.1.subpicname}</p>
+						</div>
+			
+						<div class="tit-cn">{$news.1.catname}</div>
+					</div>
+					
+					<div class="news-section2-box">
+						{volist name="$news.1.data" id="item"}
+						<div class="news2-item">
+							<a href="{:url('news_details',['id'=>$item['id']])}">
+								<h4>{$item.inputtime|date='Y.m.d'}</h4>
+								<div class="flex1">
+									<p class="flex1 line3">{$item.title}</p>
+								</div>
+								<i></i>
+							</a>
+						</div>
+						{/volist}
+					</div>
+				</div>
+				
+				
+				<div class="news-section3 wow bounceInUp">
+					<div class="tit margin-b70">
+						<div class="index1-tit">
+							<i></i>
+							<p>{$news.2.subpicname}</p>
+						</div>
+			
+						<div class="tit-cn">{$news.2.catname}</div>
+					</div>
+					
+					<div class="news-section2-box">
+						<div class="video-list">
+							{volist name="$news.2.data" id="item"}
+								<div class="video-item">
+									<a href="{:url('news_details',['id'=>$item['id']])}">
+										<div class="video-img">
+											<img src="__IMG_PATH__/news/video-zw.png" alt="" class="zwimg"><!-- 占位图 -->
+											<img src="{$item.path}" alt="" class="isimg">
+											<div class="play-icon"></div>
+										</div>
+										<div class="video-time">{$item.inputtime|date='Y.m.d'}</div>
+										<div class="video-text">{$item.title}</div>
+										<div class="video-from">来源：{$item.resume}</div>
+										<div class="video-arrow"><i></i></div>
+									</a>
+								</div>
+							{/volist}
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+					
+		<script>
+			var swiper = new Swiper('.new-scroll', {
+				direction: 'vertical',
+				roundLengths: true,
+				slidesPerView: 'auto',
+				freeMode: true,
+				scrollbar: {
+					el: '.new-scroll .swiper-scrollbar',
+				},
+				mousewheel: true,
+			});
+		</script>
+
+ 
