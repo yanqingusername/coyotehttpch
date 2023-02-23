@@ -1,4 +1,4 @@
-<?php /*a:2:{s:77:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent.html";i:1633945880;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902715;}*/ ?>
+<?php /*a:2:{s:77:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent.html";i:1633945880;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -57,11 +57,11 @@
 				
 				<div class="lang">
 					<div style="display: flex; align-items: center;">
-						<i></i><span>中文12</span>
+						<i></i><span>中文</span>
 					</div>
 					<div class="other-lang">
 						<a class="other-lang-item" href="http://en.coyotebio.com/">
-							<span>EN22</span>
+							<span>EN</span>
 						</a>
 						<!--<a class="other-lang-item" href="https://coyotebio.com.tr/">
 							<span>TUR</span>

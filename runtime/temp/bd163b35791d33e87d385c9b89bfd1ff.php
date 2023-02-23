@@ -1,4 +1,4 @@
-<?php /*a:2:{s:84:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_lab.html";i:1635472772;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:2:{s:84:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_detail.html";i:1634092152;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -84,168 +84,84 @@
 		<!-- 内页头部 结束 -->
  
 		
-		<div class="ny-banner insdel-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>);">
+		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>);">
 			<div class="core">
-				<div class="insdel-banner-text">
-					<div class="banner-en font18 big-en">
-						<i></i>
-						<span><?php echo htmlentities($cate['subpicname']); ?></span>
-					</div>
-
-					<h3 class="font46 font-bold"><?php echo htmlentities($cate['picname']); ?></h3>
-
-					<div class="ny-banner-text">
-						<?php echo $cate['description']; ?>
-					</div>
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span><?php echo htmlentities($cate['subpicname']); ?></span>
 				</div>
 
-				<div class="insdel-banner-img">
-					<img src="<?php echo htmlentities($lab['thumb_path']); ?>" alt="">
+				<h3 class="font46 font-bold line-height-1em"><?php echo htmlentities($cate['picname']); ?></h3>
+				
+				<div class="ny-banner-text">
+					<?php echo $cate['description']; ?>
 				</div>
-
-				<div class="web-loca">首页-仪器平台-<?php echo htmlentities($lab['title']); ?></div>
 			</div>
 		</div>
-
-		<div class="insdel-tab">
-			<ul class="core">
-				<li class="active" data-id="section1">产品概述</li>
-				<li data-id="section2">解决方案</li>
-				<li data-id="section3">推荐产品</li>
-				<li data-id="section4">产品资料</li>
-			</ul>
-		</div>
-
-
-		<div class="reagent-detail" id="section1">
+		
+		<div class="reagent-detail">
 			<div class="core">
 				<div class="tit">
 					<div class="index1-tit">
 						<i></i>
-						<p>Product Information</p>
+						<p>product description</p>
 					</div>
-
 					<div class="tit-cn">产品概述</div>
 				</div>
-
+				
 				<div class="reagent-detail-box1">
-					<h3><?php echo htmlentities($lab['title']); ?></h3>
+					<h3><?php echo htmlentities($reagentdata['title']); ?></h3>
 					<div class="reagent-detail-p">
-						<p><?php echo htmlentities($lab['remark']); ?></p>
+						<p>
+							<?php echo htmlentities($reagentdata['content']); ?>
+						</p>
 					</div>
-
+					
 					<h4>产品优势:</h4>
 					<ul>
-						<?php if(is_array($lab['tags']) || $lab['tags'] instanceof \think\Collection || $lab['tags'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['tags'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-						<li>
-							<i></i><p><?php echo htmlentities($item); ?></p>
-						</li>
+						<?php if(is_array($reagentdata['tags']) || $reagentdata['tags'] instanceof \think\Collection || $reagentdata['tags'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['tags'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<li><i></i><p><?php echo htmlentities($item); ?></p></li>
 						<?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
 				</div>
-
-
-				<style type="text/css">
-					table tr:nth-child(odd) {font-size: 18px;color: #1E254A;font-weight: 600}
-					table tr:nth-child(even) {font-size: 18px;color: rgba(30, 37, 74, 0.8);}
-					table tr:nth-child(even) td {padding-bottom: 25px;}
-				</style>
-				<div class="insdel-box2">
-					<div class="insdel-box2-left">
-						<div class="insdel-box2-img">
-							<img src="<?php echo htmlentities($lab['param_thumb_path']); ?>" alt="">
+				
+				<div class="reagent-detail-box2">
+					<div class="reagent-detail-box2-left">
+						<div class="reagent-detail-box2-img">
+							<img src="<?php echo htmlentities($reagentdata['thumb_path']); ?>" alt="">
 						</div>
-						<div>
-							<p><?php echo htmlentities($lab['title']); ?></p>
-						</div>
+						<!-- <div class="reagent-detail-box2-name">
+							<h3>B族链球菌</h3>
+							<p>核酸检测试剂盒</p>
+							<p>（PCR-荧光探针法）</p>
+						</div> -->
 					</div>
-					<div class="insdel-box2-right">
-						<div class="insdel-box2-con">
-							<div class="insdel-box2-cell active">
-								<?php echo $lab['paramdata']; ?>
-							</div>
-						</div>
+					<div class="reagent-detail-box2-right">
+						<p>检测方法：<?php echo htmlentities($reagentdata['test_method']); ?></p>
+						<p>样本类型：<?php echo htmlentities($reagentdata['sample_type']); ?></p>
+						<p>适用机型: <?php echo htmlentities($reagentdata['use_in']); ?></p>
 					</div>
 				</div>
-				<div class="insdel-box2">
-					<div class="insdel-box2-left">
-						<div class="insdel-box2-img">
-							<img src="<?php echo htmlentities($lab['mini_thumb_path']); ?>" alt="">
-						</div>
-						<div>
-							<p><?php echo htmlentities($lab['mini_title']); ?></p>
-						</div>
-					</div>
-					<div class="insdel-box2-right">
-						<div class="insdel-box2-con">
-							<div class="insdel-box2-cell active">
-								<?php echo $lab['minidata']; ?>
-							</div>
-						</div>
+				
+				<div class="reagent-detail-box3">
+					<h3>预期用途</h3>
+					<div class="reagent-detail-box3-p">
+						<p><?php echo $reagentdata['intended_use']; ?></p>
 					</div>
 				</div>
- 
-  
-				<div class="insdel-box4" id="section2">
-					<div class="index-tit">
-						<h3>解决方案</h3>
-						<p>
-							<i></i>
-							<span>Solutions</span>
-							<i></i>
-						</p>
-					</div>
-
-					<ul class="insdel-box4-list">
-						<?php if(is_array($solution) || $solution instanceof \think\Collection || $solution instanceof \think\Paginator): $i = 0; $__LIST__ = $solution;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<li>
-								<h3><?php echo htmlentities($item['title']); ?></h3>
-								<p style="height: 130px">
-									<?php echo htmlentities($item['remark']); ?>
-								</p>
-								<img src="<?php echo htmlentities($item['recommend_path']); ?>" alt="">
-							</li>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</ul>
-				</div>
-
-
-				<div class="insdel-box5" id="section3">
-					<div class="index-tit">
-						<h3>推荐产品</h3>
-						<p>
-							<i></i>
-							<span>Related Products</span>
-							<i></i>
-						</p>
-					</div>
-					<div class="insdel-box5-list">
-						<?php if(is_array($lab['recommend']) || $lab['recommend'] instanceof \think\Collection || $lab['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-						<div class="insdel-box5-item">
-							<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
-								<div class="insdel-box5-img">
-									<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
-								</div>
-								<p><?php echo htmlentities($item['title']); ?></p>
-							</a>
-						</div>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</div>
-				</div>
-
-
-				<div class="product-information padding-t150" id="section4">
+				
+				<div class="product-information">
 					<div class="index-tit">
 						<h3>产品资料</h3>
 						<p>
 							<i></i>
-							<span>Product Resources</span>
+							<span>Product information</span>
 							<i></i>
 						</p>
 					</div>
-
+					
 					<div class="proInfo-list">
-						<?php if(is_array($lab['files_url']) || $lab['files_url'] instanceof \think\Collection || $lab['files_url'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['files_url'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+						<?php if(is_array($reagentdata['files_url']) || $reagentdata['files_url'] instanceof \think\Collection || $reagentdata['files_url'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['files_url'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
 							<div class="proInfo-item margin-b30">
 								<a href="<?php echo htmlentities($item['path']); ?>" download="<?php echo htmlentities($item['name']); ?>">
 									<div class="proInfo-item-left">
@@ -260,44 +176,9 @@
 						<?php endforeach; endif; else: echo "" ;endif; ?>
 					</div>
 				</div>
-
 			</div>
 		</div>
-
-
-		<script>
-			$(document).ready(function() {
-				$(".insdel-tab ul li").click(function() {
-					var id = "#" + $(this).data("id");
-					$("html, body").animate({
-						scrollTop: $(id).offset().top + 1 + "px"
-					}, {
-						duration: 500,
-						easing: "swing"
-					});
-					return false;
-				});
-				var len1 = $("#section1").offset().top
-				var len2 = $("#section2").offset().top
-				var len3 = $("#section3").offset().top
-				var len4 = $("#section4").offset().top
-				
-				
-				var scroH = 0;  //滚动高度
-				$(document).scroll(function() {
-					scroH = $(document).scrollTop();  //滚动高度
-					if (scroH >= len4){
-						$(".insdel-tab ul li").eq(3).stop().addClass("active").siblings().stop().removeClass("active")
-					} else if (scroH >= len3){
-						$(".insdel-tab ul li").eq(2).stop().addClass("active").siblings().stop().removeClass("active")
-					} else if (scroH >= len2){
-						$(".insdel-tab ul li").eq(1).stop().addClass("active").siblings().stop().removeClass("active")
-					} else {
-						$(".insdel-tab ul li").eq(0).stop().addClass("active").siblings().stop().removeClass("active")
-					}
-				})
-			});
-		</script>
+	
   
 
 		<div class="footer padding-t115 padding-b140">

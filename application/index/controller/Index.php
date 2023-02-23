@@ -20,6 +20,8 @@ use app\index\model\Reagent;
 use app\index\model\Reagentclinical;
 use app\index\model\Instrument;
 use app\index\model\Mobilelab;
+use app\index\model\Smallflashtank;
+use app\index\model\Reagenttestkit;
 
 use think\Db;
 use think\App;
@@ -390,4 +392,40 @@ class Index extends Common
       
         return view('search');
     }
+
+    public function reagent_tank()
+    {
+        $cate = (new Category)->with(['image1'])->field('id,parentid,catname,image,picname,subpicname,setting,description')->where('id',65)->find();
+        $seo = unserialize($cate['setting']);
+        unset($cate['setting']);
+        $this->assign('seo',$seo); 
+        $this->assign('cate',$cate); 
+
+        $reagent = (new Smallflashtank)->getInfo(); 
+
+        $reagentdata = (new Reagentclinical)->getlist(['catid'=>65]); 
+
+        $reagentdataCount = count($reagentdata);
+
+        return view('reagent_tank',compact('reagent','reagentdata','reagentdataCount'));
+    }
+
+    public function reagent_tank_test()
+    {
+        $cate = (new Category)->with(['image1'])->field('id,parentid,catname,image,picname,subpicname,setting,description')->where('id',66)->find();
+        $seo = unserialize($cate['setting']);
+        unset($cate['setting']);
+        $this->assign('seo',$seo); 
+        $this->assign('cate',$cate); 
+
+        $reagent = (new Reagent)->getInfo(); 
+
+        $reagentdata = (new Reagentclinical)->getlist(['catid'=>66]); 
+
+        $reagentdataCount = count($reagentdata);
+
+        return view('reagent_tank_test',compact('reagent','reagentdata','reagentdataCount'));
+    }
+
+
 }

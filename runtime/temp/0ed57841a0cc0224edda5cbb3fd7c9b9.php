@@ -1,4 +1,4 @@
-<?php /*a:2:{s:78:"/Applications/phpstudy/coyotehttpch/application/index/view/index/solution.html";i:1633936683;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:2:{s:87:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_tank_test.html";i:1677044350;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -99,56 +99,118 @@
 			</div>
 		</div>
 		
-		
-		<div class="solution">
+		<div class="reagent">
 			<div class="core">
-				<div class="index1">
-					<div class="core">
-						<?php if(is_array($solution) || $solution instanceof \think\Collection || $solution instanceof \think\Paginator): $i = 0; $__LIST__ = $solution;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-						<div class="index1-item wow bounceInUp">
-							<?php if($key==1): ?>
-							<div class="index1-text">
-								<div class="index1-tit">
-									<i></i>
-									<p><?php echo htmlentities($item['entitle']); ?></p>
+				<div class="reagent-section1 wow bounceInUp">
+					<div class="index-tit">
+						<h3><?php echo htmlentities($reagent['title']); ?></h3>
+						<p>
+							<i></i>
+							<span><?php echo htmlentities($reagent['entitle']); ?></span>
+							<i></i>
+						</p>
+					</div>
+					
+					<?php if($reagentdataCount > 3): ?>
+					<div class="reagent-section1-con swiper-container">
+						<div class="swiper-wrapper">
+							<?php if(is_array($reagentdata) || $reagentdata instanceof \think\Collection || $reagentdata instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="swiper-slide">
+								<div class="reagent-proitem">
+									<a href="<?php echo url('reagent_detail',['id'=>$item['id']]); ?>">
+										<div class="reagent-proitem-img">
+											<img src="<?php echo htmlentities($item['design_path']); ?>" alt="">
+										</div>
+										<div class="reagent-proitem-kit">
+											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											<?php echo htmlentities($item['title']); if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?>
+										</div>
+									</a>
 								</div>
-								<h3><?php echo htmlentities($item['title']); ?></h3>
-								<div class="index1-p">
-									<?php echo htmlentities($item['remark']); ?>
-								</div>
-								
-								<a class="index-more" href="<?php echo url('solution_info',['id'=>$item['id']]); ?>"><span>进一步了解</span><em></em></a>
 							</div>
-							<div class="index1-img">
-								<img src="<?php echo htmlentities($item['path']); ?>" alt="">
-							</div>
-							<?php else: ?>
-							<div class="index1-img">
-								<img src="<?php echo htmlentities($item['path']); ?>" alt="">
-							</div>
-							
-							<div class="index1-text">
-								<div class="index1-tit">
-									<i></i>
-									<p><?php echo htmlentities($item['entitle']); ?></p>
-								</div>
-								<h3><?php echo htmlentities($item['title']); ?></h3>
-								<div class="index1-p">
-									<?php echo htmlentities($item['remark']); ?>
-								</div>
-								
-								<a class="index-more" href="<?php echo url('solution_info',['id'=>$item['id']]); ?>"><span>进一步了解</span><em></em></a>
-							</div>
-							<?php endif; ?>
+							<?php endforeach; endif; else: echo "" ;endif; ?>
 						</div>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
+					</div>
+					<?php endif; if($reagentdataCount == 1 | $reagentdataCount == 2 | $reagentdataCount == 3): ?>
+					<div class="reagent-section2-con swiper-container">
+						<div class="swiper-wrapper">
+							<?php if(is_array($reagentdata) || $reagentdata instanceof \think\Collection || $reagentdata instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="swiper-slide" style="width: 285px;margin-right: 20px;">
+								<div class="reagent-proitem">
+									<a href="<?php echo url('reagent_detail',['id'=>$item['id']]); ?>">
+										<div class="reagent-proitem-img">
+											<img src="<?php echo htmlentities($item['design_path']); ?>" alt="">
+										</div>
+										<div class="reagent-proitem-kit">
+											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											<?php echo htmlentities($item['title']); if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?>
+										</div>
+									</a>
+								</div>
+							</div>
+							<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+					</div>
+					<?php endif; ?>
+				</div>
+				<script>
+					var swiper = new Swiper('.reagent-section1-con', {
+						slidesPerView: 4,
+						spaceBetween: 20,
+						slidesPerGroup: 1,
+						loop: true,
+						loopFillGroupWithBlank: true,
+						autoplay: {
+							delay: 3000,
+							disableOnInteraction: false,
+						},
+					});
+				</script>
+				
+				<div class="index1-item wow bounceInUp">
+					<div class="index1-img">
+						<img src="<?php echo htmlentities($reagent['image_path2']); ?>" alt="">
+					</div>
+					
+					<div class="index1-text">
+						<div class="index1-tit">
+							<i></i>
+							<p><?php echo htmlentities($reagent['entitle2']); ?></p>
+						</div>
+						<h3><?php echo htmlentities($reagent['title2']); ?></h3>
+						<div class="index1-p">
+							<?php echo htmlentities($reagent['content2']); ?>
+						</div>
+						
+						<a class="index-more" href="<?php echo url('reagent_research'); ?>"><span>进一步了解</span><em></em></a>
+					</div>
+				</div>
+				
+				
+				<div class="index1-item wow bounceInUp">
+					<div class="index1-text">
+						<div class="index1-tit">
+							<i></i>
+							<p><?php echo htmlentities($reagent['entitle3']); ?></p>
+						</div>
+						<h3><?php echo htmlentities($reagent['title3']); ?></h3>
+						<div class="index1-p">
+							<?php echo htmlentities($reagent['content3']); ?>
+						</div>
+						
+						<a class="index-more" href="<?php echo url('reagent_food'); ?>"><span>进一步了解</span><em></em></a>
+					</div>
+					<div class="index1-img">
+						<img src="<?php echo htmlentities($reagent['image_path3']); ?>" alt="">
 					</div>
 				</div>
 			</div>
 		</div>
-	
- 
- 
+	  
 
 		<div class="footer padding-t115 padding-b140">
 			<div class="core">

@@ -32,6 +32,16 @@ class Common extends Controller
                             $value['sub'][$k]['sub'] =  db('reagentclinical')->field('id,title')->where('status',1)->order('listorder,id')->where('catid',$v['id'])->select();
                             $value['sub'][$k]['sub_url'] = 'index/reagent_detail';
                         }
+
+                        if ($v['id'] == 65) {
+                            $value['sub'][$k]['sub'] =  db('reagentclinical')->field('id,title')->where('status',1)->order('listorder,id')->where('catid',$v['id'])->select();
+                            $value['sub'][$k]['sub_url'] = 'index/reagent_detail';
+                        }
+
+                        if ($v['id'] == 66) {
+                            $value['sub'][$k]['sub'] =  db('reagentclinical')->field('id,title')->where('status',1)->order('listorder,id')->where('catid',$v['id'])->select();
+                            $value['sub'][$k]['sub_url'] = 'index/reagent_detail';
+                        }
                     }
             }
 
@@ -93,6 +103,8 @@ class Common extends Controller
                 'instrument_detail'   => '51', 
                 'instrument_list'     => '51', 
                 'instrument_lab'      => '51', 
+                'reagent_tank'        => '47',
+                'reagent_tank_test'   => '47',
             );
     }
 }

@@ -1,4 +1,4 @@
-<?php /*a:2:{s:84:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_lab.html";i:1635472772;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:2:{s:87:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_detail.html";i:1638262077;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -92,18 +92,18 @@
 						<span><?php echo htmlentities($cate['subpicname']); ?></span>
 					</div>
 
-					<h3 class="font46 font-bold"><?php echo htmlentities($cate['picname']); ?></h3>
+					<h3 style="font-size: 42px;" class="font-bold"><?php echo htmlentities($instrument['title']); ?></h3>
 
 					<div class="ny-banner-text">
-						<?php echo $cate['description']; ?>
+						<?php echo $instrument['banner_content']; ?>
 					</div>
 				</div>
 
 				<div class="insdel-banner-img">
-					<img src="<?php echo htmlentities($lab['thumb_path']); ?>" alt="">
+					<img src="<?php echo htmlentities($instrument['banner_thumb_path']); ?>" alt="">
 				</div>
 
-				<div class="web-loca">首页-仪器平台-<?php echo htmlentities($lab['title']); ?></div>
+				<div class="web-loca">首页-仪器平台-仪器-<?php echo htmlentities($instrument['title']); ?></div>
 			</div>
 		</div>
 
@@ -129,63 +129,109 @@
 				</div>
 
 				<div class="reagent-detail-box1">
-					<h3><?php echo htmlentities($lab['title']); ?></h3>
+					<h3><?php echo htmlentities($instrument['title']); ?></h3>
 					<div class="reagent-detail-p">
-						<p><?php echo htmlentities($lab['remark']); ?></p>
+						<p><?php echo htmlentities($instrument['remark']); ?></p>
 					</div>
 
 					<h4>产品优势:</h4>
-					<ul>
-						<?php if(is_array($lab['tags']) || $lab['tags'] instanceof \think\Collection || $lab['tags'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['tags'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-						<li>
-							<i></i><p><?php echo htmlentities($item); ?></p>
-						</li>
+					
+					<?php if(is_array($instrument['tags']) || $instrument['tags'] instanceof \think\Collection || $instrument['tags'] instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument['tags'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+						<ul>
+							<li>
+								<i></i><p><?php echo htmlentities($item); ?></p>
+							</li>
+						</ul>
+						<?php if(count($instrument['tags2'])>0): ?>
+						<p><?php echo htmlentities($instrument['tags2'][$key]); ?></p>
+						<?php endif; ?>
+					<?php endforeach; endif; else: echo "" ;endif; ?>
+				</div>
+
+				<div class="insdel-box2">
+					<div class="insdel-box2-left">
+						<div class="insdel-box2-img">
+							<img src="<?php echo htmlentities($instrument['param_thumb_path']); ?>" alt="">
+						</div>
+						<div>
+							<p><?php echo htmlentities($instrument['title']); ?></p>
+						</div>
+					</div>
+					<style type="text/css">
+						table tr:nth-child(odd) {font-size: 18px;color: #1E254A;font-weight: 600}
+						table tr:nth-child(even) {font-size: 18px;color: rgba(30, 37, 74, 0.8);}
+						table tr:nth-child(even) td {padding-bottom: 25px;}
+					</style>
+					<div class="insdel-box2-right">
+						<?php if(!(empty($instrument['tempdata']) || (($instrument['tempdata'] instanceof \think\Collection || $instrument['tempdata'] instanceof \think\Paginator ) && $instrument['tempdata']->isEmpty()))): ?>
+							<ul class="insdel-box2-tab">
+								<li class="active">基本参数</li>
+								<li>温控系统</li>
+							</ul>
+						<?php endif; ?>
+						<div class="insdel-box2-con">
+							<div class="insdel-box2-cell active">
+								<?php echo $instrument['paramdata']; ?>
+							</div>
+							<?php if(!(empty($instrument['tempdata']) || (($instrument['tempdata'] instanceof \think\Collection || $instrument['tempdata'] instanceof \think\Paginator ) && $instrument['tempdata']->isEmpty()))): ?>
+								<div class="insdel-box2-cell">
+									<?php echo $instrument['tempdata']; ?>
+								</div>
+							<?php endif; ?>
+						</div>
+					</div>
+					<script>
+						var i = 0;
+						$(".insdel-box2-tab li").hover(function() {
+							i = $(this).index()
+							$(this).stop().addClass("active").siblings().stop().removeClass("active")
+							$(".insdel-box2-con .insdel-box2-cell").eq(i).stop().addClass("active").siblings().stop().removeClass(
+								"active")
+						})
+					</script>
+				</div>
+
+				<?php if(is_array($instrument['parts']) || $instrument['parts'] instanceof \think\Collection || $instrument['parts'] instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument['parts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+					<div class="insdel-box6">
+						<div class="insdel-box6-img">
+							<img src="<?php echo htmlentities($item['path']); ?>" alt="">
+						</div>
+						
+						<div class="insdel-box6-right">
+							<h3><?php echo htmlentities($item['title']); ?></h3>
+							<?php echo $item['content']; ?>
+						</div>
+					</div> 
+				<?php endforeach; endif; else: echo "" ;endif; ?>
+
+				<!-- <div class="insdel-box3" id="section2">
+					<div class="index-tit">
+						<h3>配套试剂</h3>
+						<p>
+							<i></i>
+							<span>Supporting reagents</span>
+							<i></i>
+						</p>
+					</div>
+
+					<ul class="insdel-box3-list">
+						<?php if(is_array($instrument['reagent']) || $instrument['reagent'] instanceof \think\Collection || $instrument['reagent'] instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument['reagent'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<li>
+								<a href="<?php echo url('index/reagent_detail',['id'=>$item['id']]); ?>">
+									<div class="insdel-box3-img">
+										<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
+									</div>
+									<div class="insdel-box3-name">
+										<p><?php echo htmlentities($item['title']); ?></p>
+										<p>（<?php echo htmlentities($item['test_method']); ?>）</p>
+									</div>
+								</a>
+							</li>
 						<?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
-				</div>
+				</div> -->
 
 
-				<style type="text/css">
-					table tr:nth-child(odd) {font-size: 18px;color: #1E254A;font-weight: 600}
-					table tr:nth-child(even) {font-size: 18px;color: rgba(30, 37, 74, 0.8);}
-					table tr:nth-child(even) td {padding-bottom: 25px;}
-				</style>
-				<div class="insdel-box2">
-					<div class="insdel-box2-left">
-						<div class="insdel-box2-img">
-							<img src="<?php echo htmlentities($lab['param_thumb_path']); ?>" alt="">
-						</div>
-						<div>
-							<p><?php echo htmlentities($lab['title']); ?></p>
-						</div>
-					</div>
-					<div class="insdel-box2-right">
-						<div class="insdel-box2-con">
-							<div class="insdel-box2-cell active">
-								<?php echo $lab['paramdata']; ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="insdel-box2">
-					<div class="insdel-box2-left">
-						<div class="insdel-box2-img">
-							<img src="<?php echo htmlentities($lab['mini_thumb_path']); ?>" alt="">
-						</div>
-						<div>
-							<p><?php echo htmlentities($lab['mini_title']); ?></p>
-						</div>
-					</div>
-					<div class="insdel-box2-right">
-						<div class="insdel-box2-con">
-							<div class="insdel-box2-cell active">
-								<?php echo $lab['minidata']; ?>
-							</div>
-						</div>
-					</div>
-				</div>
- 
-  
 				<div class="insdel-box4" id="section2">
 					<div class="index-tit">
 						<h3>解决方案</h3>
@@ -220,7 +266,7 @@
 						</p>
 					</div>
 					<div class="insdel-box5-list">
-						<?php if(is_array($lab['recommend']) || $lab['recommend'] instanceof \think\Collection || $lab['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+						<?php if(is_array($instrument['recommend']) || $instrument['recommend'] instanceof \think\Collection || $instrument['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
 						<div class="insdel-box5-item">
 							<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
 								<div class="insdel-box5-img">
@@ -245,7 +291,7 @@
 					</div>
 
 					<div class="proInfo-list">
-						<?php if(is_array($lab['files_url']) || $lab['files_url'] instanceof \think\Collection || $lab['files_url'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['files_url'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+						<?php if(is_array($instrument['files_url']) || $instrument['files_url'] instanceof \think\Collection || $instrument['files_url'] instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument['files_url'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
 							<div class="proInfo-item margin-b30">
 								<a href="<?php echo htmlentities($item['path']); ?>" download="<?php echo htmlentities($item['name']); ?>">
 									<div class="proInfo-item-left">
@@ -281,12 +327,15 @@
 				var len2 = $("#section2").offset().top
 				var len3 = $("#section3").offset().top
 				var len4 = $("#section4").offset().top
+				var len5 = $("#section5").offset().top
 				
 				
 				var scroH = 0;  //滚动高度
 				$(document).scroll(function() {
 					scroH = $(document).scrollTop();  //滚动高度
-					if (scroH >= len4){
+					if (scroH >= len5) {
+						$(".insdel-tab ul li").eq(4).stop().addClass("active").siblings().stop().removeClass("active")
+					} else if (scroH >= len4){
 						$(".insdel-tab ul li").eq(3).stop().addClass("active").siblings().stop().removeClass("active")
 					} else if (scroH >= len3){
 						$(".insdel-tab ul li").eq(2).stop().addClass("active").siblings().stop().removeClass("active")
@@ -298,6 +347,11 @@
 				})
 			});
 		</script>
+		
+		
+		
+		<div class="back-top"></div>
+
   
 
 		<div class="footer padding-t115 padding-b140">

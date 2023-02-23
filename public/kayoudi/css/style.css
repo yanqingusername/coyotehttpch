@@ -2603,13 +2603,20 @@
 	padding-top: 100px;
 	padding-bottom: 150px;
 }
-
 .reagent-section1-con{
 	padding-top: 95px;
 	width: 100%;
 	/*display: flex;
 	flex-wrap: wrap;*/
 }
+
+.reagent-section2-con{
+	padding-top: 95px;
+	width: 100%;
+	/*display: flex;
+	flex-wrap: wrap;*/
+}
+
 /*.reagent-proitem{
 	width: 285px;
 	margin-right: 20px;

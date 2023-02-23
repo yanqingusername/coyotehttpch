@@ -1,0 +1,130 @@
+{layout name="layout" /}
+		<div class="ny-banner color-495877" style="background-image: url({$cate.imagepath});">
+			<div class="core">
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span>{$cate.subpicname}</span>
+				</div>
+
+				<h3 class="font46 font-bold line-height-1em">{$cate.picname}</h3>
+				
+				<div class="ny-banner-text">
+					{$cate.description|raw}
+				</div>
+			</div>
+		</div>
+		
+		<div class="reagent">
+			<div class="core">
+				<div class="reagent-section1 wow bounceInUp">
+					<div class="index-tit">
+						<h3>{$reagent.title}</h3>
+						<p>
+							<i></i>
+							<span>{$reagent.entitle}</span>
+							<i></i>
+						</p>
+					</div>
+					
+					{if $reagentdataCount > 3}
+					<div class="reagent-section1-con swiper-container">
+						<div class="swiper-wrapper">
+							{volist name="reagentdata" id="item"}
+							<div class="swiper-slide">
+								<div class="reagent-proitem">
+									<a href="{:url('reagent_detail',['id'=>$item['id']])}">
+										<div class="reagent-proitem-img">
+											<img src="{$item.design_path}" alt="">
+										</div>
+										<div class="reagent-proitem-kit">
+											<img src="{$item.thumb_path}" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											{$item.title}{if $item['test_method']}（{$item['test_method']}）{/if}
+										</div>
+									</a>
+								</div>
+							</div>
+							{/volist}
+						</div>
+					</div>
+					{/if}
+
+					{if $reagentdataCount == 1 | $reagentdataCount == 2 | $reagentdataCount == 3}
+					<div class="reagent-section2-con swiper-container">
+						<div class="swiper-wrapper">
+							{volist name="reagentdata" id="item"}
+							<div class="swiper-slide" style="width: 285px;margin-right: 20px;">
+								<div class="reagent-proitem">
+									<a href="{:url('reagent_detail',['id'=>$item['id']])}">
+										<div class="reagent-proitem-img">
+											<img src="{$item.design_path}" alt="">
+										</div>
+										<div class="reagent-proitem-kit">
+											<img src="{$item.thumb_path}" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											{$item.title}{if $item['test_method']}（{$item['test_method']}）{/if}
+										</div>
+									</a>
+								</div>
+							</div>
+							{/volist}
+						</div>
+					</div>
+					{/if}
+				</div>
+				<script>
+					var swiper = new Swiper('.reagent-section1-con', {
+						slidesPerView: 4,
+						spaceBetween: 20,
+						slidesPerGroup: 1,
+						loop: true,
+						loopFillGroupWithBlank: true,
+						autoplay: {
+							delay: 3000,
+							disableOnInteraction: false,
+						},
+					});
+				</script>
+				
+				<div class="index1-item wow bounceInUp">
+					<div class="index1-img">
+						<img src="{$reagent.image_path2}" alt="">
+					</div>
+					
+					<div class="index1-text">
+						<div class="index1-tit">
+							<i></i>
+							<p>{$reagent.entitle2}</p>
+						</div>
+						<h3>{$reagent.title2}</h3>
+						<div class="index1-p">
+							{$reagent.content2}
+						</div>
+						
+						<a class="index-more" href="{:url('reagent_research')}"><span>进一步了解</span><em></em></a>
+					</div>
+				</div>
+				
+				
+				<div class="index1-item wow bounceInUp">
+					<div class="index1-text">
+						<div class="index1-tit">
+							<i></i>
+							<p>{$reagent.entitle3}</p>
+						</div>
+						<h3>{$reagent.title3}</h3>
+						<div class="index1-p">
+							{$reagent.content3}
+						</div>
+						
+						<a class="index-more" href="{:url('reagent_food')}"><span>进一步了解</span><em></em></a>
+					</div>
+					<div class="index1-img">
+						<img src="{$reagent.image_path3}" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	 

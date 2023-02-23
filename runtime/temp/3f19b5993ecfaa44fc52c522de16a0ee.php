@@ -1,4 +1,4 @@
-<?php /*a:2:{s:78:"/Applications/phpstudy/coyotehttpch/application/index/view/index/solution.html";i:1633936683;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:2:{s:82:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_food.html";i:1649646813;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -100,54 +100,43 @@
 		</div>
 		
 		
-		<div class="solution">
+		<div class="reagent-food">
 			<div class="core">
-				<div class="index1">
-					<div class="core">
-						<?php if(is_array($solution) || $solution instanceof \think\Collection || $solution instanceof \think\Paginator): $i = 0; $__LIST__ = $solution;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-						<div class="index1-item wow bounceInUp">
-							<?php if($key==1): ?>
-							<div class="index1-text">
-								<div class="index1-tit">
-									<i></i>
-									<p><?php echo htmlentities($item['entitle']); ?></p>
+				<div class="index-tit">
+					<h3>食品检测试剂盒</h3>
+					<p>
+						<i></i>
+						<span>Food inspection test kit</span>
+						<i></i>
+					</p>
+				</div>
+					
+				<div class="reagent-food-list">
+					<ul>
+						<?php if(is_array($reagentdata) || $reagentdata instanceof \think\Collection || $reagentdata instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+						<li>
+							<a>
+								<div class="reagent-food-img"><img src="<?php echo htmlentities($item['thumb_path']); ?>" alt=""></div>
+								<div class="reagent-food-text">
+									<p><?php echo htmlentities($item['title']); ?></p>
+									<p><?php if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?></p>
 								</div>
-								<h3><?php echo htmlentities($item['title']); ?></h3>
-								<div class="index1-p">
-									<?php echo htmlentities($item['remark']); ?>
-								</div>
-								
-								<a class="index-more" href="<?php echo url('solution_info',['id'=>$item['id']]); ?>"><span>进一步了解</span><em></em></a>
-							</div>
-							<div class="index1-img">
-								<img src="<?php echo htmlentities($item['path']); ?>" alt="">
-							</div>
-							<?php else: ?>
-							<div class="index1-img">
-								<img src="<?php echo htmlentities($item['path']); ?>" alt="">
-							</div>
-							
-							<div class="index1-text">
-								<div class="index1-tit">
-									<i></i>
-									<p><?php echo htmlentities($item['entitle']); ?></p>
-								</div>
-								<h3><?php echo htmlentities($item['title']); ?></h3>
-								<div class="index1-p">
-									<?php echo htmlentities($item['remark']); ?>
-								</div>
-								
-								<a class="index-more" href="<?php echo url('solution_info',['id'=>$item['id']]); ?>"><span>进一步了解</span><em></em></a>
-							</div>
-							<?php endif; ?>
-						</div>
+							</a>
+						</li>
 						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</div>
+					</ul>
+				</div>
+				
+				
+				<div class="news-page">
+					<a class="page-prev" href="<?php echo $reagentdata->url($page-1); ?>"></a>
+					<div><span><?php echo htmlentities($page); ?></span>/<?php echo htmlentities($reagentdata->lastPage()); ?></div>
+					<a class="page-next" href="<?php echo $reagentdata->url( $page<$reagentdata->lastPage()?$page+1:$reagentdata->lastPage() ); ?>"></a>
 				</div>
 			</div>
 		</div>
 	
- 
+
  
 
 		<div class="footer padding-t115 padding-b140">
