@@ -2617,6 +2617,11 @@
 	flex-wrap: wrap;*/
 }
 
+.display_flex{
+	display: flex;
+	justify-content: space-evenly;
+}
+
 /*.reagent-proitem{
 	width: 285px;
 	margin-right: 20px;

@@ -30,7 +30,7 @@ class Solution extends Model{
         //查询符合条件的数据
         $data = $this->get($id,['bannerho']);
         if ($data) {
-            $data['recommend'] = (new Instrument)->with('imageho')->where('id', 'in', $data['goods'])->where('status',1)->field('id,title,thumb')->select()->toarray();
+            $data['recommend'] = (new Instrument)->with('imageho')->where('id', 'in', $data['goods'])->where('status',1)->field('id,title,thumb')->order('listorder')->select()->toarray();
         }
         return $data;
     }

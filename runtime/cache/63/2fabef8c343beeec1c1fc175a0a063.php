@@ -1,4 +1,0 @@
-<?php
-//000000003600
- exit();?>
-think_serialize:a:22:{s:2:"id";i:50;s:7:"catname";s:18:"食品检测试剂";s:6:"catdir";s:17:"shipinjianceshiji";s:4:"type";i:2;s:7:"modelid";i:24;s:8:"parentid";i:47;s:11:"arrparentid";s:4:"0,47";s:10:"arrchildid";s:2:"50";s:5:"child";i:0;s:5:"image";s:61:"/uploads/images/20211015/6d8fce1723ba15e0331164d3834b070f.jpg";s:11:"description";s:210:"提供全面而专业的食品检测试剂，确保优质、降低风险、操作简单、结果准确、经济便携，适合于各级单位进行食品快速检测，为社会食品卫生安全提供保障。";s:3:"url";s:28:"/cms/index/reagent_food.html";s:5:"items";i:24;s:7:"setting";a:6:{s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:17:"category_template";s:13:"category.html";s:13:"list_template";s:9:"list.html";s:13:"show_template";s:9:"show.html";}s:9:"listorder";i:100;s:6:"status";i:1;s:6:"imagem";i:0;s:8:"imageico";i:0;s:8:"imagecat";i:0;s:7:"picname";s:18:"食品检测试剂";s:10:"subpicname";s:10:"Food Tests";s:13:"bottom_status";i:1;}

@@ -82,7 +82,7 @@ class Instrument extends Model{
                 $images[$v] && $data['files_url'][] = $images[$v];
             }
 
-            $data['recommend'] = (new static)->with('imageho')->where('id', 'in', $data['matchingreagent'])->where('status',1)->field('id,title,thumb')->select()->toarray();
+            $data['recommend'] = (new static)->with('imageho')->where('id', 'in', $data['matchingreagent'])->where('status',1)->field('id,title,thumb')->order('listorder')->select()->toarray();
             $data['parts'] = (new Parts)->with('imageho')->where('id', 'in', $data['parts'])->field('id,title,thumb,content')->select();  
 
             $data['tags'] = $data['tags'] == ''?[]: explode(',', $data['tags']);

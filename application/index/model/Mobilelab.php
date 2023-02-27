@@ -43,7 +43,7 @@ class Mobilelab extends Model{
             foreach (explode(',', $data['goods_files']) as $k => $v) {
                 $images[$v] && $data['files_url'][] = $images[$v];
             }
-            $data['recommend'] = (new Instrument)->with('imageho')->where('id', 'in', $data['goods'])->field('id,title,thumb')->select()->toarray();
+            $data['recommend'] = (new Instrument)->with('imageho')->where('id', 'in', $data['goods'])->field('id,title,thumb')->order('listorder')->select()->toarray();
             $data['tags'] = $data['tags'] == ''?[]: explode(',', $data['tags']);
         }
         return $data;

@@ -239,12 +239,18 @@ class Index extends Common
         $content = $solution['content'];
         unset($solution['content']);
 
+        if($solution){
+            if($solution['recommend']){
+                $solutionCount = count($solution['recommend']);
+            }
+        }
+
         // $filter[]=['','exp',Db::raw('FIND_IN_SET(4,`flag`)')];
         // $related = (new Instrument)->getList($filter); 
         // if ($id == 1) {
         //      return view('solution-simple',compact('solution'));
         // }
-        return $this->display($content,compact('solution'));
+        return $this->display($content,compact('solution','solutionCount'));
     }
 
     public function reagent()
@@ -339,7 +345,13 @@ class Index extends Common
         // $filter[]=['','exp',Db::raw('FIND_IN_SET(4,`flag`)')];
         // $recommend = (new Instrument)->getList($filter); 
 
-        return view('instrument_detail',compact('instrument','cate','solution'));
+        if($instrument){
+            if($instrument['recommend']){
+                $instrumentDetailCount = count($instrument['recommend']);
+            }
+        }
+
+        return view('instrument_detail',compact('instrument','cate','solution','instrumentDetailCount'));
     }
 
     public function instrument_list()
@@ -369,7 +381,13 @@ class Index extends Common
 
         $solution = (new Solution)->index();
 
-        return view('instrument_lab',compact('lab','solution'));
+        if($lab){
+            if($lab['recommend']){
+                $instrumentLabCount = count($lab['recommend']);
+            }
+        }
+
+        return view('instrument_lab',compact('lab','solution','instrumentLabCount'));
     }
     
     

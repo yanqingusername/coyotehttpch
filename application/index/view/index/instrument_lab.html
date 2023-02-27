@@ -134,7 +134,7 @@
 							<i></i>
 						</p>
 					</div>
-					<div class="insdel-box5-list">
+					<!-- <div class="insdel-box5-list">
 						{volist name="lab.recommend" id="item"}
 						<div class="insdel-box5-item">
 							<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
@@ -146,7 +146,64 @@
 						</div>
 						{/volist}
 					</div>
+				</div> -->
+				
+					{if $instrumentLabCount == 1 | $instrumentLabCount == 2 | $instrumentLabCount == 3}
+					<div class="reagent-section2-con swiper-container">
+						<div class="display_flex">
+							{volist name="lab.recommend" id="item"}
+							<div class="">
+								<div class="reagent-proitem">
+									<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
+										<div class="insdel-box5-img">
+											<img src="{$item.thumb_path}" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											{$item.title}
+										</div>
+									</a>
+								</div>
+							</div>
+							{/volist}
+						</div>
+					</div>
+					{/if}
+
+					{if $instrumentLabCount > 3}
+					<div class="reagent-section1-con swiper-container">
+						<div class="swiper-wrapper">
+							{volist name="lab.recommend" id="item"}
+							<div class="swiper-slide">
+								<div class="reagent-proitem">
+									<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
+										<div class="insdel-box5-img">
+											<img src="{$item.thumb_path}" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											{$item.title}
+										</div>
+									</a>
+								</div>
+							</div>
+							{/volist}
+						</div>
+					</div>
+					{/if}
 				</div>
+
+				<script>
+					var swiper = new Swiper('.reagent-section1-con', {
+						slidesPerView: 3,
+						spaceBetween: 20,
+						slidesPerGroup: 1,
+						loop: true,
+						loopFillGroupWithBlank: true,
+						autoplay: {
+							delay: 3000,
+							disableOnInteraction: false,
+						},
+					});
+				</script>
 
 
 				<div class="product-information padding-t150" id="section4">

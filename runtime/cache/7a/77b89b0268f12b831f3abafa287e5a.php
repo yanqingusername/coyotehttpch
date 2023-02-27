@@ -1,4 +1,0 @@
-<?php
-//000000003600
- exit();?>
-think_serialize:a:22:{s:2:"id";i:66;s:7:"catname";s:15:"测试小闪舱";s:6:"catdir";s:17:"ceshixiaoshancang";s:4:"type";i:2;s:7:"modelid";i:24;s:8:"parentid";i:47;s:11:"arrparentid";s:0:"";s:10:"arrchildid";s:0:"";s:5:"child";i:0;s:5:"image";s:61:"/uploads/images/20211015/73a9877ed1dd1ce3f3ef496661aff9f2.jpg";s:11:"description";s:15:"测试小闪舱";s:3:"url";s:33:"/cms/index/reagent_tank_test.html";s:5:"items";i:1;s:7:"setting";a:6:{s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:17:"category_template";s:13:"category.html";s:13:"list_template";s:9:"list.html";s:13:"show_template";s:9:"show.html";}s:9:"listorder";i:100;s:6:"status";i:0;s:6:"imagem";i:0;s:8:"imageico";i:0;s:8:"imagecat";i:0;s:7:"picname";s:15:"测试小闪舱";s:10:"subpicname";s:16:"Small-Flash-Tank";s:13:"bottom_status";i:1;}

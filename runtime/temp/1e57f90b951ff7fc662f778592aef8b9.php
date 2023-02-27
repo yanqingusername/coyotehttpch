@@ -1,4 +1,4 @@
-<?php /*a:2:{s:87:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_detail.html";i:1638262077;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:2:{s:87:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_detail.html";i:1677234746;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -265,7 +265,7 @@
 							<i></i>
 						</p>
 					</div>
-					<div class="insdel-box5-list">
+					<!-- <div class="insdel-box5-list">
 						<?php if(is_array($instrument['recommend']) || $instrument['recommend'] instanceof \think\Collection || $instrument['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
 						<div class="insdel-box5-item">
 							<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
@@ -276,8 +276,61 @@
 							</a>
 						</div>
 						<?php endforeach; endif; else: echo "" ;endif; ?>
+					</div> -->
+					<?php if($instrumentDetailCount == 1 | $instrumentDetailCount == 2 | $instrumentDetailCount == 3): ?>
+					<div class="reagent-section2-con swiper-container">
+						<div class="display_flex">
+							<?php if(is_array($instrument['recommend']) || $instrument['recommend'] instanceof \think\Collection || $instrument['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="">
+								<div class="reagent-proitem">
+									<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
+										<div class="insdel-box5-img">
+											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											<?php echo htmlentities($item['title']); ?>
+										</div>
+									</a>
+								</div>
+							</div>
+							<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
 					</div>
+					<?php endif; if($instrumentDetailCount > 3): ?>
+					<div class="reagent-section1-con swiper-container">
+						<div class="swiper-wrapper">
+							<?php if(is_array($instrument['recommend']) || $instrument['recommend'] instanceof \think\Collection || $instrument['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="swiper-slide">
+								<div class="reagent-proitem">
+									<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
+										<div class="insdel-box5-img">
+											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											<?php echo htmlentities($item['title']); ?>
+										</div>
+									</a>
+								</div>
+							</div>
+							<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+					</div>
+					<?php endif; ?>
 				</div>
+
+				<script>
+					var swiper = new Swiper('.reagent-section1-con', {
+						slidesPerView: 3,
+						spaceBetween: 20,
+						slidesPerGroup: 1,
+						loop: true,
+						loopFillGroupWithBlank: true,
+						autoplay: {
+							delay: 3000,
+							disableOnInteraction: false,
+						},
+					});
+				</script>
 
 
 				<div class="product-information padding-t150" id="section4">

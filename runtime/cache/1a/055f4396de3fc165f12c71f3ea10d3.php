@@ -1,4 +1,0 @@
-<?php
-//000000003600
- exit();?>
-think_serialize:a:22:{s:2:"id";i:48;s:7:"catname";s:12:"临床试剂";s:6:"catdir";s:14:"linchuangshiji";s:4:"type";i:2;s:7:"modelid";i:24;s:8:"parentid";i:47;s:11:"arrparentid";s:4:"0,47";s:10:"arrchildid";s:2:"48";s:5:"child";i:0;s:5:"image";s:61:"/uploads/images/20211015/17f9d2df83d0ebe2d3af6a21ea248018.jpg";s:11:"description";s:136:"卡尤迪拥有NMPA批准认证的核酸检测试剂，并提供配套解决方案，可高效、准确、特异地获得检测结果。";s:3:"url";s:23:"/cms/index/reagent.html";s:5:"items";i:6;s:7:"setting";a:6:{s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:17:"category_template";s:13:"category.html";s:13:"list_template";s:9:"list.html";s:13:"show_template";s:9:"show.html";}s:9:"listorder";i:100;s:6:"status";i:1;s:6:"imagem";i:0;s:8:"imageico";i:0;s:8:"imagecat";i:0;s:7:"picname";s:12:"临床试剂";s:10:"subpicname";s:14:"CLINICAL TESTS";s:13:"bottom_status";i:1;}

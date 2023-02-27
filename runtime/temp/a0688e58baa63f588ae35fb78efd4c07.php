@@ -1,4 +1,4 @@
-<?php /*a:2:{s:84:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_lab.html";i:1677461311;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:1:{s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -84,159 +84,142 @@
 		<!-- 内页头部 结束 -->
  
 		
-		<div class="ny-banner insdel-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>);">
+		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($solution['path']); ?>);">
 			<div class="core">
-				<div class="insdel-banner-text">
-					<div class="banner-en font18 big-en">
-						<i></i>
-						<span><?php echo htmlentities($cate['subpicname']); ?></span>
-					</div>
-
-					<h3 class="font46 font-bold"><?php echo htmlentities($cate['picname']); ?></h3>
-
-					<div class="ny-banner-text">
-						<?php echo $cate['description']; ?>
-					</div>
+				<div class="banner-en font18 big-en">
+					<i></i>
+					<span><?php echo htmlentities($solution['entitle']); ?></span>
 				</div>
 
-				<div class="insdel-banner-img">
-					<img src="<?php echo htmlentities($lab['thumb_path']); ?>" alt="">
-				</div>
-
-				<div class="web-loca">首页-仪器平台-<?php echo htmlentities($lab['title']); ?></div>
+				<h3 class="font46 font-bold line-height-1em"><?php echo htmlentities($solution['title']); ?></h3>
 			</div>
 		</div>
-
-		<div class="insdel-tab">
-			<ul class="core">
-				<li class="active" data-id="section1">产品概述</li>
-				<li data-id="section2">解决方案</li>
-				<li data-id="section3">推荐产品</li>
-				<li data-id="section4">产品资料</li>
-			</ul>
-		</div>
-
-
-		<div class="reagent-detail" id="section1">
+		
+		
+		<div class="solution-high pageBg">
 			<div class="core">
-				<div class="tit">
-					<div class="index1-tit">
+				<div class="index-tit">
+					<h3>高通量全检测</h3>
+					<p>
 						<i></i>
-						<p>Product Information</p>
-					</div>
-
-					<div class="tit-cn">产品概述</div>
+						<span>FULL THROUGHPUT SOLUTIONS</span>
+						<i></i>
+					</p>
 				</div>
-
-				<div class="reagent-detail-box1">
-					<h3><?php echo htmlentities($lab['title']); ?></h3>
-					<div class="reagent-detail-p">
-						<p><?php echo htmlentities($lab['remark']); ?></p>
-					</div>
-
-					<h4>产品优势:</h4>
-					<ul>
-						<?php if(is_array($lab['tags']) || $lab['tags'] instanceof \think\Collection || $lab['tags'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['tags'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-						<li>
-							<i></i><p><?php echo htmlentities($item); ?></p>
-						</li>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</ul>
-				</div>
-
-
-				<style type="text/css">
-					table tr:nth-child(odd) {font-size: 18px;color: #1E254A;font-weight: 600}
-					table tr:nth-child(even) {font-size: 18px;color: rgba(30, 37, 74, 0.8);}
-					table tr:nth-child(even) td {padding-bottom: 25px;}
-				</style>
-				<div class="insdel-box2">
-					<div class="insdel-box2-left">
-						<div class="insdel-box2-img">
-							<img src="<?php echo htmlentities($lab['param_thumb_path']); ?>" alt="">
-						</div>
-						<div>
-							<p><?php echo htmlentities($lab['title']); ?></p>
-						</div>
-					</div>
-					<div class="insdel-box2-right">
-						<div class="insdel-box2-con">
-							<div class="insdel-box2-cell active">
-								<?php echo $lab['paramdata']; ?>
+				<div class="high1 text-right">
+					<div class="high-left">
+						<div class="high-text">
+							<h2>1</h2>
+							<div class="high-text-p1">
+								<p>样本随来随检</p>
+								<p>报告“立等可取”1分钟加样</p>
+								<p>30分钟出结果</p>
+							</div>
+							<div class="high-text-p2">
+								<p>帮助 “四早”落地，及时控制传染源，切断传播</p>
+								<p>为急诊争取时间，缓解医院检验科压力</p>
 							</div>
 						</div>
+						
+						<ul class="high-ul">
+							<li><i style="background-image: url(/kayoudi/img/solution/high1-icon1.png);"></i><p>医院的急诊</p></li>
+							<li><i style="background-image: url(/kayoudi/img/solution/high1-icon2.png);"></i><p>医院的发热门诊</p></li>
+							<li><i style="background-image: url(/kayoudi/img/solution/high1-icon3.png);"></i><p>医院的检验科</p></li>
+							<li><i style="background-image: url(/kayoudi/img/solution/high1-icon4.png);"></i><p>疾控中心的实验室</p></li>
+						</ul>
+					</div>
+					<div class="high-right">
+						<div class="high1-img text-center">
+							<img src="/kayoudi/img/solution/high1-img.png" >
+						</div>
 					</div>
 				</div>
-				<div class="insdel-box2">
-					<div class="insdel-box2-left">
-						<div class="insdel-box2-img">
-							<img src="<?php echo htmlentities($lab['mini_thumb_path']); ?>" alt="">
-						</div>
-						<div>
-							<p><?php echo htmlentities($lab['mini_title']); ?></p>
+				
+				
+				
+				<div class="high2">
+					<div class="high-left">
+						<div class="high1-img">
+							<img src="/kayoudi/img/solution/high2-img.png" >
 						</div>
 					</div>
-					<div class="insdel-box2-right">
-						<div class="insdel-box2-con">
-							<div class="insdel-box2-cell active">
-								<?php echo $lab['minidata']; ?>
+					<div class="high-right">
+						<div class="high-text">
+							<h2>2</h2>
+							<div class="high-text-p1">
+								<p>机动部署，安全规范</p>
+								<p>现场采检，现场出报告</p>
+							</div>
+							<div class="high-text-p2">
+								<p>帮助旅客快速通行，缓解交通滞留压力</p>
+								<p>助力市民生产、生活和出行的有序运行,促进经济贸易的恢复</p>
 							</div>
 						</div>
+						
+						<ul class="high-ul">
+							<li><i style="background-image: url(/kayoudi/img/solution/high2-icon1.png);"></i><p>机场海关出入境</p></li>
+							<li><i style="background-image: url(/kayoudi/img/solution/high2-icon2.png);"></i><p>高速路关卡</p></li>
+							<li><i style="background-image: url(/kayoudi/img/solution/high2-icon3.png);"></i><p>行驶的游轮上</p></li>
+							<li><i style="background-image: url(/kayoudi/img/solution/high2-icon4.png);"></i><p>火车站进出站口</p></li>
+						</ul>
 					</div>
 				</div>
- 
-  
-				<div class="insdel-box4" id="section2">
-					<div class="index-tit">
-						<h3>解决方案</h3>
-						<p>
-							<i></i>
-							<span>Solutions</span>
-							<i></i>
-						</p>
+				
+				
+				
+				<div class="high3">
+					<div class="high3-box">
+						<div class="high-left text-right">
+							<div class="high-text">
+								<h2>3</h2>
+								<div class="high-text-p1">
+									<p>统筹调配，平战结合</p>
+									<p>即达即检，日检万管</p>
+									<p>触达需求的最基层、最前线</p>
+								</div>
+								<div class="high-text-p2">
+									<p>缓解基层及边境地区检测条件不足的问题</p>
+									<p>局部突发疫情时能够迅速调集</p>
+									<p>形成强大的现场应急检测能力</p>
+									<p>守护疫情防控最后一公里</p>
+								</div>
+							</div>
+						</div>
+						<div class="high-right">
+							<ul class="high-ul">
+								<li><i style="background-image: url(/kayoudi/img/solution/high3-icon1.png);"></i><p>疫情核心区大规模精准筛查</p></li>
+								<li>
+									<i style="background-image: url(/kayoudi/img/solution/high3-icon2.png);"></i>
+									<p>缓解基层“医荒”、<br>医疗无法触达之地的问题</p>
+								</li>
+								<li><i style="background-image: url(/kayoudi/img/solution/high3-icon3.png);"></i><p>大型赛事现场采检出报告</p></li>
+								<li><i style="background-image: url(/kayoudi/img/solution/high3-icon4.png);"></i><p>国内外重要会议现场采检出报告</p></li>
+							</ul>
+						</div>
 					</div>
-
-					<ul class="insdel-box4-list">
-						<?php if(is_array($solution) || $solution instanceof \think\Collection || $solution instanceof \think\Paginator): $i = 0; $__LIST__ = $solution;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<li>
-								<h3><?php echo htmlentities($item['title']); ?></h3>
-								<p style="height: 130px">
-									<?php echo htmlentities($item['remark']); ?>
-								</p>
-								<img src="<?php echo htmlentities($item['recommend_path']); ?>" alt="">
-							</li>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</ul>
+					
+					<div class="high3-img">
+						<img src="/kayoudi/img/solution/high3-img.jpg" alt="">
+					</div>
 				</div>
-
-
-				<div class="insdel-box5" id="section3">
+				
+				
+				
+				<div class="about-product">
 					<div class="index-tit">
-						<h3>推荐产品</h3>
+						<h3>相关产品</h3>
 						<p>
 							<i></i>
 							<span>Related Products</span>
 							<i></i>
 						</p>
 					</div>
-					<!-- <div class="insdel-box5-list">
-						<?php if(is_array($lab['recommend']) || $lab['recommend'] instanceof \think\Collection || $lab['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-						<div class="insdel-box5-item">
-							<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
-								<div class="insdel-box5-img">
-									<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
-								</div>
-								<p><?php echo htmlentities($item['title']); ?></p>
-							</a>
-						</div>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</div>
-				</div> -->
-				
-					<?php if($instrumentLabCount == 1 | $instrumentLabCount == 2 | $instrumentLabCount == 3): ?>
+					
+					
+					<?php if($solutionCount == 1 | $solutionCount == 2 | $solutionCount == 3): ?>
 					<div class="reagent-section2-con swiper-container">
 						<div class="display_flex">
-							<?php if(is_array($lab['recommend']) || $lab['recommend'] instanceof \think\Collection || $lab['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<?php if(is_array($solution['recommend']) || $solution['recommend'] instanceof \think\Collection || $solution['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $solution['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
 							<div class="">
 								<div class="reagent-proitem">
 									<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
@@ -252,10 +235,10 @@
 							<?php endforeach; endif; else: echo "" ;endif; ?>
 						</div>
 					</div>
-					<?php endif; if($instrumentLabCount > 3): ?>
+					<?php endif; if($solutionCount > 3): ?>
 					<div class="reagent-section1-con swiper-container">
 						<div class="swiper-wrapper">
-							<?php if(is_array($lab['recommend']) || $lab['recommend'] instanceof \think\Collection || $lab['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<?php if(is_array($solution['recommend']) || $solution['recommend'] instanceof \think\Collection || $solution['recommend'] instanceof \think\Paginator): $i = 0; $__LIST__ = $solution['recommend'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
 							<div class="swiper-slide">
 								<div class="reagent-proitem">
 									<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
@@ -272,6 +255,8 @@
 						</div>
 					</div>
 					<?php endif; ?>
+					
+					
 				</div>
 
 				<script>
@@ -287,72 +272,9 @@
 						},
 					});
 				</script>
-
-
-				<div class="product-information padding-t150" id="section4">
-					<div class="index-tit">
-						<h3>产品资料</h3>
-						<p>
-							<i></i>
-							<span>Product Resources</span>
-							<i></i>
-						</p>
-					</div>
-
-					<div class="proInfo-list">
-						<?php if(is_array($lab['files_url']) || $lab['files_url'] instanceof \think\Collection || $lab['files_url'] instanceof \think\Paginator): $i = 0; $__LIST__ = $lab['files_url'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<div class="proInfo-item margin-b30">
-								<a href="<?php echo htmlentities($item['path']); ?>" download="<?php echo htmlentities($item['name']); ?>">
-									<div class="proInfo-item-left">
-										<i></i>
-										<p>下载</p>
-									</div>
-									<div class="proInfo-item-right line2">
-										<?php echo htmlentities($item['name']); ?>
-									</div>
-								</a>
-							</div>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</div>
-				</div>
-
 			</div>
 		</div>
-
-
-		<script>
-			$(document).ready(function() {
-				$(".insdel-tab ul li").click(function() {
-					var id = "#" + $(this).data("id");
-					$("html, body").animate({
-						scrollTop: $(id).offset().top + 1 + "px"
-					}, {
-						duration: 500,
-						easing: "swing"
-					});
-					return false;
-				});
-				var len1 = $("#section1").offset().top
-				var len2 = $("#section2").offset().top
-				var len3 = $("#section3").offset().top
-				var len4 = $("#section4").offset().top
-				
-				
-				var scroH = 0;  //滚动高度
-				$(document).scroll(function() {
-					scroH = $(document).scrollTop();  //滚动高度
-					if (scroH >= len4){
-						$(".insdel-tab ul li").eq(3).stop().addClass("active").siblings().stop().removeClass("active")
-					} else if (scroH >= len3){
-						$(".insdel-tab ul li").eq(2).stop().addClass("active").siblings().stop().removeClass("active")
-					} else if (scroH >= len2){
-						$(".insdel-tab ul li").eq(1).stop().addClass("active").siblings().stop().removeClass("active")
-					} else {
-						$(".insdel-tab ul li").eq(0).stop().addClass("active").siblings().stop().removeClass("active")
-					}
-				})
-			});
-		</script>
+	
   
 
 		<div class="footer padding-t115 padding-b140">
