@@ -325,9 +325,8 @@ class Index extends Common
         $instrument = (new Instrument)->getList(); 
         $lab = (new Mobilelab)->getRecom(); 
 
-
- 
-        return view('instrument_platform',compact('instrument','lab'));
+        $instrumentCount = count($instrument);
+        return view('instrument_platform',compact('instrument','lab','instrumentCount'));
     }
 
     public function instrument_detail($id)

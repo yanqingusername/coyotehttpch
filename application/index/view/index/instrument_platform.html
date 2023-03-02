@@ -27,7 +27,7 @@
 						</p>
 					</div>
 					
-					<div class="instrument1-list">
+					<!-- <div class="instrument1-list">
 						{volist name="instrument" id="item"}
 							<div class="instrument1-item">
 								<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
@@ -39,7 +39,63 @@
 							</div>
 						{/volist}
 					</div>
+				</div> -->
+				{if $instrumentCount == 1 | $instrumentCount == 2 | $instrumentCount == 3}
+					<div class="reagent-section2-con swiper-container">
+						<div class="display_flex">
+							{volist name="instrument" id="item"}
+							<div class="">
+								<div class="reagent-proitem">
+									<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
+										<div class="instrument1-img">
+											<img src="{$item.thumb_path}" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											{$item.title}
+										</div>
+									</a>
+								</div>
+							</div>
+							{/volist}
+						</div>
+					</div>
+					{/if}
+
+					{if $instrumentCount > 3}
+					<div class="reagent-section1-con swiper-container">
+						<div class="swiper-wrapper">
+							{volist name="instrument" id="item"}
+							<div class="swiper-slide">
+								<div class="reagent-proitem">
+									<a href="{:url('index/instrument_detail',['id'=>$item.id])}">
+										<div class="instrument1-img">
+											<img src="{$item.thumb_path}" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											{$item.title}
+										</div>
+									</a>
+								</div>
+							</div>
+							{/volist}
+						</div>
+					</div>
+					{/if}
 				</div>
+
+				<script>
+					var swiper = new Swiper('.reagent-section1-con', {
+						slidesPerView: 3,
+						spaceBetween: 20,
+						slidesPerGroup: 1,
+						loop: true,
+						loopFillGroupWithBlank: true,
+						autoplay: {
+							delay: 3000,
+							disableOnInteraction: false,
+						},
+					});
+				</script>
 				
 				
 				<div class="instrument2 clearfix wow bounceInUp" style="background-image: url({$lab.recom_thumb_path});">

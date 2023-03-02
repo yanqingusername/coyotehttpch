@@ -10728,3 +10728,645 @@
 [ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 595 LIMIT 1 [ RunTime:0.000290s ]
 [ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 595 LIMIT 1 [ RunTime:0.000269s ]
 [ error ] [8]未定义数组索引: menusource[/Applications/phpstudy/coyotehttpch/runtime/temp/2445ff1cb35d458eace5704a7361316d.php:110]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:31+08:00] ::1 GET localhost:8080/admin/index/index.html
+[运行时间：0.059693s] [吞吐率：16.75req/s] [内存消耗：964.13kb] [文件加载：173]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/admin/view/index/index.html [ array (
+  0 => 'userInfo',
+  1 => 'SUBMENU_CONFIG',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000454s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_menu` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 0  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 55  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 75  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 76  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 77  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000653s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 84  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 23  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 32  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 33  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 37  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 3  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 10  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 11  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 27  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 24  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 25  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 26  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 13  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 14  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 28  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 29  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 30  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 31  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 15  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 16  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 18  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 19  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 21  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 17  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 22  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 48  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 49  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 50  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 51  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 20  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_menu` WHERE  `parentid` = 12  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000470s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:31+08:00] ::1 GET localhost:8080/cms/cms/index/menuid/57.html
+[运行时间：0.007812s] [吞吐率：128.01req/s] [内存消耗：900.72kb] [文件加载：170]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/index/index.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/index/menuid/57_html' => '',
+  'menuid' => '57',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000445s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000355s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:31+08:00] ::1 GET localhost:8080/cms/cms/public_categorys.html
+[运行时间：0.009098s] [吞吐率：109.91req/s] [内存消耗：961.72kb] [文件加载：170]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/index/menuid/57.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/public_categorys_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/public_categorys.html [ array (
+  0 => 'json',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000600s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000863s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_category` [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_category` ORDER BY `listorder`,`id` ASC [ RunTime:0.000784s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:32+08:00] ::1 GET localhost:8080/cms/cms/panl.html
+[运行时间：0.036827s] [吞吐率：27.15req/s] [内存消耗：1,039.61kb] [文件加载：170]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/index/menuid/57.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/panl_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/panl.html [ array (
+  0 => 'info',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000631s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000778s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_category` [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_category` [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_model` [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_model` WHERE  `module` = 'cms' [ RunTime:0.000920s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_tags` [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_tags` [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_index` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_index` [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_information` [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_information` [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_solution` [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_solution` [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_joinus` [ RunTime:0.001640s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_joinus` [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_mycompany` [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_mycompany` [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_cooperation` [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_cooperation` [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_about` [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_about` [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_aboutdata` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_aboutdata` [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_vanguard` [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_vanguard` [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_development` [ RunTime:0.001852s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_development` [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_technology` [ RunTime:0.000712s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_technology` [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_technologydata` [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_technologydata` [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_joindata` [ RunTime:0.001156s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_joindata` [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_position` [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_position` [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_positioncate` [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_positioncate` [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_reagent` [ RunTime:0.000651s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_reagent` [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_reagentclinical` [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_reagentclinical` [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_instrument` [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_instrument` [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_parts` [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_parts` [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_mobilelab` [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_mobilelab` [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_smallflashtank` [ RunTime:0.000794s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_smallflashtank` [ RunTime:0.000345s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:33+08:00] ::1 GET localhost:8080/cms/cms/classlist/catid/46.html
+[运行时间：0.013057s] [吞吐率：76.59req/s] [内存消耗：1,051.12kb] [文件加载：175]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/public_categorys.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/classlist/catid/46_html' => '',
+  'catid' => '46',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/classlist.html [ array (
+  0 => 'string',
+  1 => 'catid',
+  2 => 'fielddata',
+  3 => 'has_thumb',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000520s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000391s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000369s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_category` [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_category` WHERE  `id` = 46 LIMIT 1 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_attachment` [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 625 LIMIT 1 [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_category` ORDER BY `listorder`,`id` ASC [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_model_field` [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_model_field` WHERE  `modelid` = 22  AND `liststatus` = 1 ORDER BY `listorder`,`id` [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_model_field` WHERE  `modelid` = 22  AND `status` = 1  AND `name` = 'thumb' [ RunTime:0.000441s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:34+08:00] ::1 GET localhost:8080/cms/cms/classlist/catid/46.html?page=1&limit=10
+[运行时间：0.012540s] [吞吐率：79.75req/s] [内存消耗：954.98kb] [文件加载：170]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/classlist/catid/46.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-platform' => '"macOS"',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/classlist/catid/46_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'catid' => '46',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000484s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_model` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_model` WHERE  `id` = 22 LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_solution` [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_solution` WHERE  `catid` = 46  AND `status` <> -1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_solution` WHERE  `catid` = 46  AND `status` <> -1 ORDER BY `listorder`,`id` DESC LIMIT 0,10 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_attachment` [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 574 LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 573 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 572 LIMIT 1 [ RunTime:0.000291s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:36+08:00] ::1 GET localhost:8080/admin/index/index.html
+[运行时间：0.011368s] [吞吐率：87.97req/s] [内存消耗：935.08kb] [文件加载：173]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/admin/view/index/index.html [ array (
+  0 => 'userInfo',
+  1 => 'SUBMENU_CONFIG',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000539s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000397s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:36+08:00] ::1 GET localhost:8080/cms/cms/index/menuid/57.html
+[运行时间：0.006101s] [吞吐率：163.90req/s] [内存消耗：900.73kb] [文件加载：170]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/index/index.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/index/menuid/57_html' => '',
+  'menuid' => '57',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/index.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000620s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000354s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:36+08:00] ::1 GET localhost:8080/cms/cms/public_categorys.html
+[运行时间：0.007950s] [吞吐率：125.79req/s] [内存消耗：961.72kb] [文件加载：170]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/index/menuid/57.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/public_categorys_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/public_categorys.html [ array (
+  0 => 'json',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000453s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_category` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_category` ORDER BY `listorder`,`id` ASC [ RunTime:0.000595s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:37+08:00] ::1 GET localhost:8080/cms/cms/panl.html
+[运行时间：0.031375s] [吞吐率：31.87req/s] [内存消耗：1,039.61kb] [文件加载：170]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/index/menuid/57.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/panl_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/panl.html [ array (
+  0 => 'info',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000579s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_category` [ RunTime:0.000721s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_category` [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_model` [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_model` WHERE  `module` = 'cms' [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_tags` [ RunTime:0.000753s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_tags` [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_index` [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_index` [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_information` [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_information` [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_solution` [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_solution` [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_joinus` [ RunTime:0.000772s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_joinus` [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_mycompany` [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_mycompany` [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_cooperation` [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_cooperation` [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_about` [ RunTime:0.000716s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_about` [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_aboutdata` [ RunTime:0.000629s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_aboutdata` [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_vanguard` [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_vanguard` [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_development` [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_development` [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_technology` [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_technology` [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_technologydata` [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_technologydata` [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_joindata` [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_joindata` [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_position` [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_position` [ RunTime:0.000174s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_positioncate` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_positioncate` [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_reagent` [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_reagent` [ RunTime:0.000148s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_reagentclinical` [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_reagentclinical` [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_instrument` [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_instrument` [ RunTime:0.000177s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_parts` [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_parts` [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_mobilelab` [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_mobilelab` [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_smallflashtank` [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_smallflashtank` [ RunTime:0.000239s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:37+08:00] ::1 GET localhost:8080/cms/cms/classlist/catid/46.html
+[运行时间：0.009890s] [吞吐率：101.11req/s] [内存消耗：936.16kb] [文件加载：174]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/public_categorys.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/classlist/catid/46_html' => '',
+  'catid' => '46',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/classlist.html [ array (
+  0 => 'string',
+  1 => 'catid',
+  2 => 'fielddata',
+  3 => 'has_thumb',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000535s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_category` [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_category` ORDER BY `listorder`,`id` ASC [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_model_field` [ RunTime:0.000731s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_model_field` WHERE  `modelid` = 22  AND `liststatus` = 1 ORDER BY `listorder`,`id` [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_model_field` WHERE  `modelid` = 22  AND `status` = 1  AND `name` = 'thumb' [ RunTime:0.000428s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:38+08:00] ::1 GET localhost:8080/cms/cms/classlist/catid/46.html?page=1&limit=10
+[运行时间：0.009907s] [吞吐率：100.94req/s] [内存消耗：951.19kb] [文件加载：170]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/classlist/catid/46.html',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'sec-ch-ua-platform' => '"macOS"',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'sec-ch-ua-mobile' => '?0',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/classlist/catid/46_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'catid' => '46',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000511s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_solution` [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yzn_solution` WHERE  `catid` = 46  AND `status` <> -1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_solution` WHERE  `catid` = 46  AND `status` <> -1 ORDER BY `listorder`,`id` DESC LIMIT 0,10 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_attachment` [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 574 LIMIT 1 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 573 LIMIT 1 [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 572 LIMIT 1 [ RunTime:0.000368s ]
+---------------------------------------------------------------
+
+[2023-02-27T10:56:39+08:00] ::1 GET localhost:8080/cms/cms/edit/catid/46.html?id=2
+[运行时间：0.015583s] [吞吐率：64.17req/s] [内存消耗：1,008.15kb] [文件加载：174]
+[ info ] [ LANG ] /Applications/phpstudy/coyotehttpch/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'city=null; Hm_lpvt_a8f67055341f98053f02a1eb4e55382a=1627962011; Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuaml1bmlkdS5jb20iLCJhdWQiOiJsb2NhbGhvc3Q6OTUyOCIsImlhdCI6MTYzMTg5MDQyNCwiZXhwIjoxNjMxODk3NjI0LCJhaWQiOjUzMywidWlkIjoxLCJpZGUiOiIiLCJqdGkiOiI5ZjE2MzU3ZTdmYjcyMmE4MWFkM2QxOTA5ZDU3ODVkYSIsImV4dCI6W119.tXEK19aNR6aY3ZQySSJSHP2_tHmNY7gRmQjia1Yxx3E; ACCESS_TOKEN=4291d7da9005377ec9aec4a71ea837f; vue_admin_template_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmppdW5pZHUuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3N0b3JlLmppdW5pZHUuY29tIiwiaWF0IjoxNjM5NzExOTQ3LCJleHAiOjE2Mzk3MTU1NDcsImFpZCI6NDcsInVpZCI6MSwiaWRlIjoiIiwianRpIjoiNmUwN2E0ZWQ3ZTM2ODkyOWI2YmFmZDFhMTAyNGRkZDAifQ.OzdgvbF_O_dFBj6-1_gs6ts3MqEBXqo-jFsd_GywDXg; Admin-Token=admin-token; userid=1; token=ceshitoken; Idea-14db8b9e=fc44bba6-1711-4667-b839-b4754c1518d0; Idea-b43838f8=883bcbff-0fca-49f0-84bf-84b2b15edc29; Admin-Phone=undefined; sidebarStatus=0; JSESSIONID=434BA564AE216164827E3818AA9BC26F; PHPSESSID=go8a5simsiraol8o3nf81enpjs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/cms/cms/classlist/catid/46.html',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'sec-ch-ua-platform' => '"macOS"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'connection' => 'close',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  '/cms/cms/edit/catid/46_html' => '',
+  'id' => '2',
+  'catid' => '46',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/phpstudy/coyotehttpch/application/cms/view/cms/edit.html [ array (
+  0 => 'catid',
+  1 => 'fieldList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000646s ] mysql:host=127.0.0.1;dbname=kyd_web_zhongwan;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_admin` [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_model_field` [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT `name`,`title`,`remark`,`type`,`isadd`,`iscore`,`ifsystem`,`ifrequire`,`setting` FROM `yzn_model_field` WHERE  `modelid` = 22  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_model` [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT `tablename`,`type` FROM `yzn_model` WHERE  `id` = 22 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_solution` [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_solution` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_instrument` [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SELECT * FROM `yzn_instrument` WHERE  `status` = 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yzn_attachment` [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 573 LIMIT 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 573 LIMIT 1 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 704 LIMIT 1 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 704 LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 595 LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `path`,`driver`,`thumb` FROM `yzn_attachment` WHERE  `id` = 595 LIMIT 1 [ RunTime:0.000255s ]
+[ error ] [8]未定义数组索引: menusource[/Applications/phpstudy/coyotehttpch/runtime/temp/2445ff1cb35d458eace5704a7361316d.php:110]

@@ -1,4 +1,4 @@
-<?php /*a:2:{s:89:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_platform.html";i:1633746536;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:2:{s:89:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_platform.html";i:1677727115;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -112,7 +112,7 @@
 						</p>
 					</div>
 					
-					<div class="instrument1-list">
+					<!-- <div class="instrument1-list">
 						<?php if(is_array($instrument) || $instrument instanceof \think\Collection || $instrument instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
 							<div class="instrument1-item">
 								<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
@@ -124,7 +124,61 @@
 							</div>
 						<?php endforeach; endif; else: echo "" ;endif; ?>
 					</div>
+				</div> -->
+				<?php if($instrumentCount == 1 | $instrumentCount == 2 | $instrumentCount == 3): ?>
+					<div class="reagent-section2-con swiper-container">
+						<div class="display_flex">
+							<?php if(is_array($instrument) || $instrument instanceof \think\Collection || $instrument instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="">
+								<div class="reagent-proitem">
+									<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
+										<div class="instrument1-img">
+											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											<?php echo htmlentities($item['title']); ?>
+										</div>
+									</a>
+								</div>
+							</div>
+							<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+					</div>
+					<?php endif; if($instrumentCount > 3): ?>
+					<div class="reagent-section1-con swiper-container">
+						<div class="swiper-wrapper">
+							<?php if(is_array($instrument) || $instrument instanceof \think\Collection || $instrument instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="swiper-slide">
+								<div class="reagent-proitem">
+									<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
+										<div class="instrument1-img">
+											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
+										</div>
+										<div class="reagent-proitem-p">
+											<?php echo htmlentities($item['title']); ?>
+										</div>
+									</a>
+								</div>
+							</div>
+							<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+					</div>
+					<?php endif; ?>
 				</div>
+
+				<script>
+					var swiper = new Swiper('.reagent-section1-con', {
+						slidesPerView: 3,
+						spaceBetween: 20,
+						slidesPerGroup: 1,
+						loop: true,
+						loopFillGroupWithBlank: true,
+						autoplay: {
+							delay: 3000,
+							disableOnInteraction: false,
+						},
+					});
+				</script>
 				
 				
 				<div class="instrument2 clearfix wow bounceInUp" style="background-image: url(<?php echo htmlentities($lab['recom_thumb_path']); ?>);">
