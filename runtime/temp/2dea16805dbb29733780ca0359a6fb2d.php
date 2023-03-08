@@ -1,4 +1,4 @@
-<?php /*a:2:{s:84:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_detail.html";i:1634092152;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678243335;}*/ ?>
+<?php /*a:2:{s:83:"/Applications/phpstudy/coyotehttpch/application/index/view/index/join_position.html";i:1633573546;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678243335;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -84,102 +84,188 @@
 		<!-- 内页头部 结束 -->
  
 		
-		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>);">
+		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>)">
 			<div class="core">
 				<div class="banner-en font18 big-en">
 					<i></i>
 					<span><?php echo htmlentities($cate['subpicname']); ?></span>
 				</div>
-
+		
 				<h3 class="font46 font-bold line-height-1em"><?php echo htmlentities($cate['picname']); ?></h3>
-				
-				<div class="ny-banner-text">
+		
+				<div class="banner-text">
 					<?php echo $cate['description']; ?>
 				</div>
 			</div>
 		</div>
 		
-		<div class="reagent-detail">
+		
+		<div class="padding-t120 padding-b100">
 			<div class="core">
-				<div class="tit">
-					<div class="index1-tit">
+				<div class="index-tit">
+					<h3>查看所有职位</h3>
+					<p>
 						<i></i>
-						<p>product description</p>
-					</div>
-					<div class="tit-cn">产品概述</div>
+						<span>View all positions</span>
+						<i></i>
+					</p>
 				</div>
 				
-				<div class="reagent-detail-box1">
-					<h3><?php echo htmlentities($reagentdata['title']); ?></h3>
-					<div class="reagent-detail-p">
-						<p>
-							<?php echo htmlentities($reagentdata['content']); ?>
-						</p>
-					</div>
-					
-					<h4>产品优势:</h4>
-					<ul>
-						<?php if(is_array($reagentdata['tags']) || $reagentdata['tags'] instanceof \think\Collection || $reagentdata['tags'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['tags'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<li><i></i><p><?php echo htmlentities($item); ?></p></li>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</ul>
-				</div>
-				
-				<div class="reagent-detail-box2">
-					<div class="reagent-detail-box2-left">
-						<div class="reagent-detail-box2-img">
-							<img src="<?php echo htmlentities($reagentdata['thumb_path']); ?>" alt="">
+				<form action="" method="get">
+				<div class="joinDetail-search">
+					<div class="jsearch-item jsearch-type">
+						<div class="jsearch-input">
+							<i style="background-image: url(/kayoudi/img/join/bag.png)"></i>
+							<p>全部</p>
+							<i class="arrow"></i>
 						</div>
-						<!-- <div class="reagent-detail-box2-name">
-							<h3>B族链球菌</h3>
-							<p>核酸检测试剂盒</p>
-							<p>（PCR-荧光探针法）</p>
-						</div> -->
+						<input type="hidden" name="positioncate" value="" id="positioncate">
+						<input type="hidden" name="province" value="" id="province">
+						<input type="hidden" name="city" value="" id="city">
+						<input type="hidden" name="qu" value="" id="qu">
+						<ul class="sel-list">
+							<li data-positioncate="0">全部</li>
+							<?php if(is_array($positioncate) || $positioncate instanceof \think\Collection || $positioncate instanceof \think\Paginator): $i = 0; $__LIST__ = $positioncate;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+								<li data-positioncate="<?php echo htmlentities($item['id']); ?>"><?php echo htmlentities($item['title']); ?></li>
+							<?php endforeach; endif; else: echo "" ;endif; ?>
+						</ul>
 					</div>
-					<div class="reagent-detail-box2-right">
-						<p>检测方法：<?php echo htmlentities($reagentdata['test_method']); ?></p>
-						<p>样本类型：<?php echo htmlentities($reagentdata['sample_type']); ?></p>
-						<p>适用机型: <?php echo htmlentities($reagentdata['use_in']); ?></p>
-					</div>
-				</div>
-				
-				<div class="reagent-detail-box3">
-					<h3>预期用途</h3>
-					<div class="reagent-detail-box3-p">
-						<p><?php echo $reagentdata['intended_use']; ?></p>
-					</div>
-				</div>
-				
-				<div class="product-information">
-					<div class="index-tit">
-						<h3>产品资料</h3>
-						<p>
-							<i></i>
-							<span>Product information</span>
-							<i></i>
-						</p>
-					</div>
-					
-					<div class="proInfo-list">
-						<?php if(is_array($reagentdata['files_url']) || $reagentdata['files_url'] instanceof \think\Collection || $reagentdata['files_url'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['files_url'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<div class="proInfo-item margin-b30">
-								<a href="<?php echo htmlentities($item['path']); ?>" download="<?php echo htmlentities($item['name']); ?>">
-									<div class="proInfo-item-left">
-										<i></i>
-										<p>下载</p>
-									</div>
-									<div class="proInfo-item-right line2">
-										<?php echo htmlentities($item['name']); ?>
-									</div>
-								</a>
+					<div class="jsearch-item jsearch-city">
+						<div class="jsearch-input">
+							<i style="background-image: url(/kayoudi/img/join/add.png)"></i>
+							<p>所在城市</p>
+							<i class="arrow"></i>
+						</div>
+						
+						<div class="placePopup_sel_distpicker">
+							<div id="distpicker" data-toggle="distpicker">
+								<div class="form-group">
+									<select class="form-control" id="provinceInput"></select>
+								</div>
+								<div class="form-group">
+									<select class="form-control" id="cityInput"></select>
+								</div>
+								<div class="form-group">
+									<select class="form-control" id="districtInput"></select>
+								</div>
 							</div>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
 					</div>
+					<button type="submit" ></button>
 				</div>
+				</form>
+				
+				<div class="job-list">
+					<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+					<div class="job-item">
+						<i></i>
+						<div class="job-context">
+							<h4><?php echo htmlentities($item['catename']); ?></h4>
+							<h3><?php echo htmlentities($item['title']); ?></h3>
+							<div class="job-text job-text1">
+								<p><?php echo htmlentities($item['content']); ?></p>
+							</div>
+							<div class="job-text job-text2">
+								<?php echo $item['duty']; ?>
+							</div>
+						</div>
+					</div>
+					<?php endforeach; endif; else: echo "" ;endif; ?>
+				</div>
+				 
+				<div class="news-page">
+					<a class="page-prev" href="<?php echo $list->url($page-1); ?>"></a>
+					<a class="page-next" href="<?php echo $list->url( $page<$list->lastPage()?$page+1:$list->lastPage() ); ?>"></a>
+				</div>
+				
 			</div>
 		</div>
-	
-  
+		
+		 
+		
+		
+		<script src="/kayoudi/js/distpicker.data.js"></script>
+		<script src="/kayoudi/js/distpicker.js"></script>
+		
+		<script>
+			$("#distpicker").distpicker({
+				autoSelect: false,
+			});
+			$(function() {
+				$(".job-list .job-item").hover(function() {
+					$(this).stop().addClass("active").siblings().stop().removeClass("active")
+					$(this).find(".job-text2").stop().slideDown()
+					$(this).siblings().find(".job-text2").stop().slideUp()
+					$(this).find(".job-text1").stop().slideUp()
+					$(this).siblings().find(".job-text1").stop().slideDown()
+				})
+				
+				
+				$(document).click(function() {
+					$(".jsearch-type .sel-list").stop().hide();
+					$(".placePopup_sel_distpicker").stop().hide();
+				});
+				
+				
+				$(".jsearch-type .jsearch-input").click(function(e){
+					e.stopPropagation();
+					$(".jsearch-type .sel-list").stop().toggle();
+					$(".placePopup_sel_distpicker").stop().hide();
+				})
+				$(".jsearch-type .sel-list li").click(function(e){
+					e.stopPropagation();
+					let v = $(this).text()
+					let c = $(this).data('positioncate')
+		 
+					$(".jsearch-type .jsearch-input p").text(v)
+					$("#positioncate").val(c)
+					$(".jsearch-type .sel-list").stop().hide();
+				})
+				
+				
+				$("#provinceInput").change(function() {
+					var province = $("#provinceInput").val();
+					var code = $(this).find("option:selected").data('code');
+					$("#province").val(code)
+					$("#city").val('')
+					$("#qu").val('')
+					if (province) {
+						$(".jsearch-city .jsearch-input p").text(province);
+					} else{
+						$(".jsearch-city .jsearch-input p").text('所在城市');
+					}
+				})
+				$("#cityInput").change(function() {
+					var province = $("#provinceInput").val();
+					var city = $("#cityInput").val();
+					var code = $(this).find("option:selected").data('code');
+					$("#city").val(code)
+					$("#qu").val('')
+					$(".jsearch-city .jsearch-input p").text(province + '/' + city);
+				})
+				$("#districtInput").change(function() {
+					var province = $("#provinceInput").val();
+					var city = $("#cityInput").val();
+					var district = $("#districtInput").val();
+					var code = $(this).find("option:selected").data('code');
+					$("#qu").val(code)
+
+					$(".jsearch-city .jsearch-input p").text(province + '/' + city + '/' + district);
+				})
+				
+				$(".jsearch-city .jsearch-input").click(function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					$(".placePopup_sel_distpicker").toggle();
+					$(".jsearch-type .sel-list").stop().hide();
+				})
+				
+				$(".placePopup_sel_distpicker").click(function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+				})
+			})
+		</script>  
 
 		<div class="footer padding-t115 padding-b140">
 			<div class="core">

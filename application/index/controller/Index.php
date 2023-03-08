@@ -169,7 +169,7 @@ class Index extends Common
         return view('join_us',compact('joinus','join_data'));
     }
 
-    public function join_position()
+    public function join_position($id)
     {
         $cate = (new Category)->with(['image1']) ->field('id,parentid,catname,image,picname,subpicname,setting,description')->where('id',42)->find();
         $seo = unserialize($cate['setting']);
@@ -204,6 +204,7 @@ class Index extends Common
                 ->field('c.*,i.title as catename') 
                 ->join('positioncate i','i.id= c.positioncate','left')
                 ->where('c.status',1)
+                ->where('c.positionrecruit', $id)
                 ->where($where)
                 ->paginate(9, false, [
                     'query' => request()->get()

@@ -1,4 +1,4 @@
-<?php /*a:3:{s:70:"/Applications/phpstudy/coyotehttpch/application/cms/view/cms/edit.html";i:1628736514;s:76:"/Applications/phpstudy/coyotehttpch/application/admin/view/index_layout.html";i:1596779062;s:73:"/Applications/phpstudy/coyotehttpch/application/admin/view/inputItem.html";i:1677477080;}*/ ?>
+<?php /*a:3:{s:70:"/Applications/phpstudy/coyotehttpch/application/cms/view/cms/edit.html";i:1628736514;s:76:"/Applications/phpstudy/coyotehttpch/application/admin/view/index_layout.html";i:1596779062;s:73:"/Applications/phpstudy/coyotehttpch/application/admin/view/inputItem.html";i:1677647167;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -342,8 +342,8 @@
         <div id="codeEditor" class="ace_editor" style="min-height:500px"></div>
     </div>
     <textarea style="display: none" type="text/plain" id="<?php echo htmlentities($vo['name']); ?>" name="<?php echo htmlentities($vo['fieldArr']); ?>[<?php echo htmlentities($vo['name']); ?>]"><?php echo htmlentities($vo['value']); ?></textarea>
-    <script src="http://cdn.bootcss.com/ace/1.2.4/ace.js"></script>
-    <script src="http://cdn.bootcss.com/ace/1.2.4/ext-language_tools.js"></script>
+    <script src="https://cdn.bootcss.com/ace/1.2.4/ace.js"></script>
+    <script src="https://cdn.bootcss.com/ace/1.2.4/ext-language_tools.js"></script>
     <script type="text/javascript">
         function initEditor(){
             //获取控件 id ：codeEditor

@@ -1,4 +1,4 @@
-<?php /*a:2:{s:84:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_detail.html";i:1634092152;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678243335;}*/ ?>
+<?php /*a:2:{s:77:"/Applications/phpstudy/coyotehttpch/application/index/view/index/contact.html";i:1639115260;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,7 +20,7 @@
 		<div class="header ny-header">
 			<div class="core">
 				<div class="logo">
-					<a href="/"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a>
+					<a href="index.html"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a>
 				</div>
 				
 				<div class="nav">
@@ -84,102 +84,74 @@
 		<!-- 内页头部 结束 -->
  
 		
-		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>);">
+		<div class="ny-banner color-495877" style="background-image: url(/kayoudi/img/contact/banner.png)">
 			<div class="core">
 				<div class="banner-en font18 big-en">
 					<i></i>
-					<span><?php echo htmlentities($cate['subpicname']); ?></span>
+					<span>Contact US</span>
 				</div>
 
-				<h3 class="font46 font-bold line-height-1em"><?php echo htmlentities($cate['picname']); ?></h3>
-				
-				<div class="ny-banner-text">
-					<?php echo $cate['description']; ?>
-				</div>
+				<h3 class="font46 font-bold line-height-1em">联系我们</h3>
 			</div>
 		</div>
-		
-		<div class="reagent-detail">
+		<div class="contact">
 			<div class="core">
 				<div class="tit">
 					<div class="index1-tit">
 						<i></i>
-						<p>product description</p>
+						<p>contact information</p>
 					</div>
-					<div class="tit-cn">产品概述</div>
+
+					<div class="tit-cn">联系方式</div>
 				</div>
 				
-				<div class="reagent-detail-box1">
-					<h3><?php echo htmlentities($reagentdata['title']); ?></h3>
-					<div class="reagent-detail-p">
-						<p>
-							<?php echo htmlentities($reagentdata['content']); ?>
-						</p>
-					</div>
-					
-					<h4>产品优势:</h4>
-					<ul>
-						<?php if(is_array($reagentdata['tags']) || $reagentdata['tags'] instanceof \think\Collection || $reagentdata['tags'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['tags'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<li><i></i><p><?php echo htmlentities($item); ?></p></li>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</ul>
-				</div>
-				
-				<div class="reagent-detail-box2">
-					<div class="reagent-detail-box2-left">
-						<div class="reagent-detail-box2-img">
-							<img src="<?php echo htmlentities($reagentdata['thumb_path']); ?>" alt="">
+				<div class="contact-main wow bounceInUp" style="background-image: url(/kayoudi/img/contact/earth.png);">
+					<!-- <div class="contact-phone">
+						<i></i>
+						<div>
+							<h3>热线电话</h3>
+							<p><?php echo config('web_site_phone'); ?></p>
 						</div>
-						<!-- <div class="reagent-detail-box2-name">
-							<h3>B族链球菌</h3>
-							<p>核酸检测试剂盒</p>
-							<p>（PCR-荧光探针法）</p>
-						</div> -->
-					</div>
-					<div class="reagent-detail-box2-right">
-						<p>检测方法：<?php echo htmlentities($reagentdata['test_method']); ?></p>
-						<p>样本类型：<?php echo htmlentities($reagentdata['sample_type']); ?></p>
-						<p>适用机型: <?php echo htmlentities($reagentdata['use_in']); ?></p>
-					</div>
-				</div>
-				
-				<div class="reagent-detail-box3">
-					<h3>预期用途</h3>
-					<div class="reagent-detail-box3-p">
-						<p><?php echo $reagentdata['intended_use']; ?></p>
-					</div>
-				</div>
-				
-				<div class="product-information">
-					<div class="index-tit">
-						<h3>产品资料</h3>
-						<p>
-							<i></i>
-							<span>Product information</span>
-							<i></i>
-						</p>
-					</div>
+					</div> -->
 					
-					<div class="proInfo-list">
-						<?php if(is_array($reagentdata['files_url']) || $reagentdata['files_url'] instanceof \think\Collection || $reagentdata['files_url'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['files_url'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<div class="proInfo-item margin-b30">
-								<a href="<?php echo htmlentities($item['path']); ?>" download="<?php echo htmlentities($item['name']); ?>">
-									<div class="proInfo-item-left">
-										<i></i>
-										<p>下载</p>
-									</div>
-									<div class="proInfo-item-right line2">
-										<?php echo htmlentities($item['name']); ?>
-									</div>
-								</a>
+					<div class="global-distribution">
+						<div class="distribution-tit">
+							<h3><span>全 球 分 布</span><i></i></h3>
+							<p>Global distribution</p>
+						</div>
+						<div class="distribution-con">
+							<div class="distribution-item">
+								<i></i>
+								<p><span>5</span> 大洲产品覆盖</p>
 							</div>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
+							<div class="distribution-item">
+								<i></i>
+								<p><span>20</span> 个区域办公室</p>
+							</div>
+						</div>
 					</div>
 				</div>
+				
+				<div class="wow bounceInUp">
+					<?php echo $content; ?>
+				</div>
+				
+				<div class="contact-list">
+					<?php if(is_array($mycompany) || $mycompany instanceof \think\Collection || $mycompany instanceof \think\Paginator): $i = 0; $__LIST__ = $mycompany;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_array($item) || $item instanceof \think\Collection || $item instanceof \think\Paginator): $i = 0; $__LIST__ = $item;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?>
+						<div class="contact-item wow bounceInUp">
+							<h3><?php echo htmlentities($it['title']); ?></h3>
+							<p><?php echo htmlentities($it['address']); ?></p>
+						</div>
+						<?php endforeach; endif; else: echo "" ;endif; ?>
+					<?php endforeach; endif; else: echo "" ;endif; ?>
+				</div>
+				
+				
 			</div>
 		</div>
-	
-  
+
+ 
+ 
 
 		<div class="footer padding-t115 padding-b140">
 			<div class="core">

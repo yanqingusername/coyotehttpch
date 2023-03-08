@@ -27,22 +27,26 @@
 					</p>
 				</div>
 
-				<a class="join1-main" href="{:url('index/join_position')}">
-					<div class="join1-item" style="background-image: url({$joinus.image1_path});">
-						<h3>{$joinus.recruit1}</h3>
-						<div class="join1-text">
-							<p>{$joinus.recruit_content1}</p>
-							<p>{$joinus.recruit_remark1}</p>
+				<div class="join1-main">
+					<a class="join1-item" href="{:url('index/join_position',['id'=>$joinus.recruit1id])}">
+						<div class="join1-item" style="background-image: url({$joinus.image1_path});width: 100%;">
+							<h3>{$joinus.recruit1}</h3>
+							<div class="join1-text">
+								<p>{$joinus.recruit_content1}</p>
+								<p>{$joinus.recruit_remark1}</p>
+							</div>
 						</div>
-					</div>
-					<div class="join1-item" style="background-image: url({$joinus.image2_path});">
-						<h3>{$joinus.recruit2}</h3>
-						<div class="join1-text">
-							<p>{$joinus.recruit_content2}</p>
-							<p>{$joinus.recruit_remark2}</p>
+					</a>
+					<a class="join1-item" href="{:url('index/join_position',['id'=>$joinus.recruit2id])}">
+						<div class="join1-item" style="background-image: url({$joinus.image2_path});width: 100%;">
+							<h3>{$joinus.recruit2}</h3>
+							<div class="join1-text">
+								<p>{$joinus.recruit_content2}</p>
+								<p>{$joinus.recruit_remark2}</p>
+							</div>
 						</div>
-					</div>
-				</a>
+					</a>
+				</div>
 			</div>
 		</div>
 

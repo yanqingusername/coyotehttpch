@@ -1,0 +1,4 @@
+<?php
+//000000000010
+ exit();?>
+think_serialize:a:7:{s:5:"catid";i:55;s:5:"title";s:0:"";s:8:"keywords";s:0:"";s:11:"description";s:0:"";s:7:"content";s:644:"<p><br/></p><p style="line-height: 3em;"><span style="font-size: 24px;">更多业务咨询，欢迎致电&nbsp;<span style="font-size: 24px; color: rgb(192, 0, 0);"><strong>全国热线电话：</strong></span><strong>400-807-3999</strong>&nbsp;&nbsp;或发送邮件至&nbsp;</span><span style="font-size: 24px; color: rgb(192, 0, 0);"><strong>企业邮箱：<span style="font-size: 24px; color: rgb(0, 0, 0);">sales@coyotebio.com</span></strong></span><span style="font-size: 24px;"><strong>&nbsp;</strong>。</span></p><p><br/></p><p><span style="color: rgb(192, 0, 0);"><strong><span style="font-size: 18px;"><br/></span></strong></span></p>";s:9:"inputtime";i:0;s:10:"updatetime";i:0;}

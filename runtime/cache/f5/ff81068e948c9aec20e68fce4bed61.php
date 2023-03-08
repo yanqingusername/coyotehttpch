@@ -1,0 +1,4 @@
+<?php
+//000000003600
+ exit();?>
+think_serialize:a:22:{s:2:"id";i:53;s:7:"catname";s:6:"仪器";s:6:"catdir";s:4:"yiqi";s:4:"type";i:1;s:7:"modelid";i:0;s:8:"parentid";i:51;s:11:"arrparentid";s:4:"0,51";s:10:"arrchildid";s:2:"53";s:5:"child";i:0;s:5:"image";s:61:"/uploads/images/20211014/1ee09899b646b8cc799b88d21824de0b.jpg";s:11:"description";s:181:"卡尤迪专注于即时检验（POCT）分子诊断及全自动一体化分子诊断仪器平台，使PCR真正走到现场，开启简易、便携、利民的分子检测之路。";s:3:"url";s:31:"/cms/index/instrument_list.html";s:5:"items";i:0;s:7:"setting";a:4:{s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:13:"page_template";s:9:"page.html";}s:9:"listorder";i:100;s:6:"status";i:1;s:6:"imagem";i:0;s:8:"imageico";i:0;s:8:"imagecat";i:0;s:7:"picname";s:6:"仪器";s:10:"subpicname";s:20:"Instrument Platforms";s:13:"bottom_status";i:1;}
