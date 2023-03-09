@@ -1,4 +1,4 @@
-<?php /*a:2:{s:77:"/Applications/phpstudy/coyotehttpch/application/index/view/index/join_us.html";i:1678242568;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678243335;}*/ ?>
+<?php /*a:2:{s:86:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_research.html";i:1649646819;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678254309;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,6 +20,7 @@
 		<div class="header ny-header">
 			<div class="core">
 				<div class="logo">
+					<!-- <a href="index.html"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a> -->
 					<a href="/"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a>
 				</div>
 				
@@ -84,7 +85,7 @@
 		<!-- 内页头部 结束 -->
  
 		
-		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>)">
+		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>);">
 			<div class="core">
 				<div class="banner-en font18 big-en">
 					<i></i>
@@ -92,109 +93,119 @@
 				</div>
 
 				<h3 class="font46 font-bold line-height-1em"><?php echo htmlentities($cate['picname']); ?></h3>
-
-				<div class="banner-text">
+				
+				<div class="ny-banner-text">
 					<?php echo $cate['description']; ?>
 				</div>
 			</div>
 		</div>
-
-
-
-		<div class="join1 wow bounceInUp">
+		
+		
+		<div class="reagent-sr">
 			<div class="core">
 				<div class="index-tit">
-					<h3><?php echo htmlentities($joinus['title']); ?></h3>
+					<h3>科研试剂盒</h3>
 					<p>
 						<i></i>
-						<span><?php echo htmlentities($joinus['entitle']); ?></span>
+						<span>RESEARCH REAGENTS</span>
 						<i></i>
 					</p>
 				</div>
-
-				<div class="join1-main">
-					<a class="join1-item" href="<?php echo url('index/join_position',['id'=>$joinus['recruit1id']]); ?>">
-						<div class="join1-item" style="background-image: url(<?php echo htmlentities($joinus['image1_path']); ?>);width: 100%;">
-							<h3><?php echo htmlentities($joinus['recruit1']); ?></h3>
-							<div class="join1-text">
-								<p><?php echo htmlentities($joinus['recruit_content1']); ?></p>
-								<p><?php echo htmlentities($joinus['recruit_remark1']); ?></p>
-							</div>
-						</div>
-					</a>
-					<a class="join1-item" href="<?php echo url('index/join_position',['id'=>$joinus['recruit2id']]); ?>">
-						<div class="join1-item" style="background-image: url(<?php echo htmlentities($joinus['image2_path']); ?>);width: 100%;">
-							<h3><?php echo htmlentities($joinus['recruit2']); ?></h3>
-							<div class="join1-text">
-								<p><?php echo htmlentities($joinus['recruit_content2']); ?></p>
-								<p><?php echo htmlentities($joinus['recruit_remark2']); ?></p>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="join2 wow bounceInUp">
-			<div class="core">
-				<img src="<?php echo htmlentities($joinus['thumb_path']); ?>" alt="">
-			</div>
-		</div>
-
-		<div class="join3 pageBg wow bounceInUp">
-			<div class="core">
-				<div class="tit">
-					<div class="index1-tit">
-						<i></i>
-						<p><?php echo htmlentities($joinus['entitle2']); ?></p>
-					</div>
-
-					<div class="tit-cn"><?php echo htmlentities($joinus['title2']); ?></div>
-				</div>
 				
-				<div class="join3-swiper">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<?php if(is_array($join_data) || $join_data instanceof \think\Collection || $join_data instanceof \think\Paginator): $i = 0; $__LIST__ = $join_data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<div class="swiper-slide">
-								<div class="join3-box">
-									<h3><?php echo htmlentities($item['title']); ?></h3>
-									<div class="join3-text">
-										<div class="join3-p1">
-											<p><?php echo htmlentities($item['content1']); ?></p>
-											<p><?php echo htmlentities($item['content2']); ?></p>
-										</div>
-										<div class="join3-p2">
-											<?php echo htmlentities($item['content3']); ?>
-										</div>
-									</div>
-									<!-- <div class="join3-ren" style="background-image: url(<?php echo htmlentities($item['path']); ?>);"></div> -->
-								</div>
+				<div class="reagent-main">
+					<div class="reagent-tab">
+						<div class="reagent-tab-item active">
+							<div class="reagent-tab-icon">
+								<i class="before-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon1.png);"></i>
+								<i class="after-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon1h.png);"></i>
+							</div>
+							<p>呼吸道类</p>
+						</div>
+						<div class="reagent-tab-item">
+							<div class="reagent-tab-icon">
+								<i class="before-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon2.png);"></i>
+								<i class="after-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon2h.png);"></i>
+							</div>
+							<p>肠道类</p>
+						</div>
+						<div class="reagent-tab-item">
+							<div class="reagent-tab-icon">
+								<i class="before-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon3.png);"></i>
+								<i class="after-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon3h.png);"></i>
+							</div>
+							<p>妇科类</p>
+						</div>
+						<div class="reagent-tab-item">
+							<div class="reagent-tab-icon">
+								<i class="before-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon4.png);"></i>
+								<i class="after-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon4h.png);"></i>
+							</div>
+							<p>血液类</p>
+						</div>
+						<div class="reagent-tab-item">
+							<div class="reagent-tab-icon">
+								<i class="before-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon5.png);"></i>
+								<i class="after-icon" style="background-image: url(/kayoudi/img/reagent/tab-icon5h.png);"></i>
+							</div>
+							<p>个体化用药类</p>
+						</div>
+					</div>
+					
+					
+					<div class="reagent-con">
+						<div class="reagent-con-cell active">
+							<?php if(is_array($reagentdata['1']) || $reagentdata['1'] instanceof \think\Collection || $reagentdata['1'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['1'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="reagent-con-item">
+								<p><?php echo htmlentities($item['title']); if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?></p>
 							</div>
 							<?php endforeach; endif; else: echo "" ;endif; ?>
 						</div>
+						<div class="reagent-con-cell">
+							<?php if(is_array($reagentdata['2']) || $reagentdata['2'] instanceof \think\Collection || $reagentdata['2'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['2'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="reagent-con-item">
+								<p><?php echo htmlentities($item['title']); if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?></p>
+							</div>
+						 	<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+
+						<div class="reagent-con-cell">
+							<?php if(is_array($reagentdata['3']) || $reagentdata['3'] instanceof \think\Collection || $reagentdata['3'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['3'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="reagent-con-item">
+								<p><?php echo htmlentities($item['title']); if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?></p>
+							</div>
+						 	<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+
+						<div class="reagent-con-cell">
+							<?php if(is_array($reagentdata['4']) || $reagentdata['4'] instanceof \think\Collection || $reagentdata['4'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['4'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="reagent-con-item">
+								<p><?php echo htmlentities($item['title']); if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?></p>
+							</div>
+						 	<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+						<div class="reagent-con-cell">
+							<?php if(is_array($reagentdata['5']) || $reagentdata['5'] instanceof \think\Collection || $reagentdata['5'] instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata['5'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+							<div class="reagent-con-item">
+								<p><?php echo htmlentities($item['title']); if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?></p>
+							</div>
+						 	<?php endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+						 
 					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
 				</div>
 			</div>
 		</div>
- 
-		<!-- Initialize Swiper -->
+		
+		
 		<script>
-			var swiper = new Swiper('.join3-swiper .swiper-container', {
-				loop: true,
-				// autoplay: {
-				// 	delay: 2500,
-				// 	disableOnInteraction: false,
-				// },
-				navigation: {
-					nextEl: '.join3-swiper .swiper-button-next',
-					prevEl: '.join3-swiper .swiper-button-prev',
-				},
-			});
+			var i = 0;
+			$(".reagent-tab .reagent-tab-item").hover(function(){
+				i = $(this).index()
+				$(this).stop().addClass("active").siblings().stop().removeClass("active")
+				$(".reagent-con .reagent-con-cell").eq(i).stop().addClass("active").siblings().stop().removeClass("active")
+			})
 		</script>
-
+	
   
 
 		<div class="footer padding-t115 padding-b140">

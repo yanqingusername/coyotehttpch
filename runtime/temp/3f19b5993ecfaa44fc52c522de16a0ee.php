@@ -1,4 +1,4 @@
-<?php /*a:2:{s:89:"/Applications/phpstudy/coyotehttpch/application/index/view/index/instrument_platform.html";i:1677727115;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:2:{s:82:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_food.html";i:1649646813;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678254309;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,7 +20,8 @@
 		<div class="header ny-header">
 			<div class="core">
 				<div class="logo">
-					<a href="index.html"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a>
+					<!-- <a href="index.html"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a> -->
+					<a href="/"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a>
 				</div>
 				
 				<div class="nav">
@@ -100,105 +101,44 @@
 		</div>
 		
 		
-		<div class="instrument">
+		<div class="reagent-food">
 			<div class="core">
-				<div class="instrument1 wow bounceInUp">
-					<div class="index-tit">
-						<h3><?php echo htmlentities($cate['picname']); ?></h3>
-						<p>
-							<i></i>
-							<span><?php echo htmlentities($cate['subpicname']); ?></span>
-							<i></i>
-						</p>
-					</div>
-					
-					<!-- <div class="instrument1-list">
-						<?php if(is_array($instrument) || $instrument instanceof \think\Collection || $instrument instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<div class="instrument1-item">
-								<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
-									<div class="instrument1-img">
-										<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
-									</div>
-									<p><?php echo htmlentities($item['title']); ?></p>
-								</a>
-							</div>
-						<?php endforeach; endif; else: echo "" ;endif; ?>
-					</div>
-				</div> -->
-				<?php if($instrumentCount == 1 | $instrumentCount == 2 | $instrumentCount == 3): ?>
-					<div class="reagent-section2-con swiper-container">
-						<div class="display_flex">
-							<?php if(is_array($instrument) || $instrument instanceof \think\Collection || $instrument instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<div class="">
-								<div class="reagent-proitem">
-									<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
-										<div class="instrument1-img">
-											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
-										</div>
-										<div class="reagent-proitem-p">
-											<?php echo htmlentities($item['title']); ?>
-										</div>
-									</a>
-								</div>
-							</div>
-							<?php endforeach; endif; else: echo "" ;endif; ?>
-						</div>
-					</div>
-					<?php endif; if($instrumentCount > 3): ?>
-					<div class="reagent-section1-con swiper-container">
-						<div class="swiper-wrapper">
-							<?php if(is_array($instrument) || $instrument instanceof \think\Collection || $instrument instanceof \think\Paginator): $i = 0; $__LIST__ = $instrument;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<div class="swiper-slide">
-								<div class="reagent-proitem">
-									<a href="<?php echo url('index/instrument_detail',['id'=>$item['id']]); ?>">
-										<div class="instrument1-img">
-											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
-										</div>
-										<div class="reagent-proitem-p">
-											<?php echo htmlentities($item['title']); ?>
-										</div>
-									</a>
-								</div>
-							</div>
-							<?php endforeach; endif; else: echo "" ;endif; ?>
-						</div>
-					</div>
-					<?php endif; ?>
+				<div class="index-tit">
+					<h3>食品检测试剂盒</h3>
+					<p>
+						<i></i>
+						<span>Food inspection test kit</span>
+						<i></i>
+					</p>
 				</div>
-
-				<script>
-					var swiper = new Swiper('.reagent-section1-con', {
-						slidesPerView: 3,
-						spaceBetween: 20,
-						slidesPerGroup: 1,
-						loop: true,
-						loopFillGroupWithBlank: true,
-						autoplay: {
-							delay: 3000,
-							disableOnInteraction: false,
-						},
-					});
-				</script>
+					
+				<div class="reagent-food-list">
+					<ul>
+						<?php if(is_array($reagentdata) || $reagentdata instanceof \think\Collection || $reagentdata instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+						<li>
+							<a>
+								<div class="reagent-food-img"><img src="<?php echo htmlentities($item['thumb_path']); ?>" alt=""></div>
+								<div class="reagent-food-text">
+									<p><?php echo htmlentities($item['title']); ?></p>
+									<p><?php if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?></p>
+								</div>
+							</a>
+						</li>
+						<?php endforeach; endif; else: echo "" ;endif; ?>
+					</ul>
+				</div>
 				
 				
-				<div class="instrument2 clearfix wow bounceInUp" style="background-image: url(<?php echo htmlentities($lab['recom_thumb_path']); ?>);">
-					<div class="instrument2-text">
-						<div class="index1-tit">
-							<i></i>
-							<p><?php echo htmlentities($lab['recom_entitle']); ?></p>
-						</div>
-						<h3><?php echo htmlentities($lab['recom_title']); ?></h3>
-						
-						<div class="instrument2-text-p">
-							<?php echo $lab['recom_content']; ?>
-						</div>
-						
-						<a class="index-more" href="<?php echo url('index/instrument_lab'); ?>"><span>进一步了解</span><em></em></a>
-					</div>
+				<div class="news-page">
+					<a class="page-prev" href="<?php echo $reagentdata->url($page-1); ?>"></a>
+					<div><span><?php echo htmlentities($page); ?></span>/<?php echo htmlentities($reagentdata->lastPage()); ?></div>
+					<a class="page-next" href="<?php echo $reagentdata->url( $page<$reagentdata->lastPage()?$page+1:$reagentdata->lastPage() ); ?>"></a>
 				</div>
 			</div>
 		</div>
-	  
+	
+
+ 
 
 		<div class="footer padding-t115 padding-b140">
 			<div class="core">

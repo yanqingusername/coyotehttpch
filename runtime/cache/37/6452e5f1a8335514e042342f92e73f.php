@@ -1,4 +1,0 @@
-<?php
-//000000003600
- exit();?>
-think_serialize:a:22:{s:2:"id";i:1;s:7:"catname";s:6:"主页";s:6:"catdir";s:5:"zhuye";s:4:"type";i:1;s:7:"modelid";i:1;s:8:"parentid";i:0;s:11:"arrparentid";s:1:"0";s:10:"arrchildid";s:7:"1,28,29";s:5:"child";i:1;s:5:"image";s:61:"/uploads/images/20220216/fb9fc8f340fce67080c6c1af6c6ada15.jpg";s:11:"description";s:34:"Molecular Diagnostics For Everyone";s:3:"url";s:1:"/";s:5:"items";i:1;s:7:"setting";a:4:{s:10:"meta_title";s:15:"卡尤迪生物";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:13:"page_template";s:9:"page.html";}s:9:"listorder";i:1;s:6:"status";i:1;s:6:"imagem";i:0;s:8:"imageico";i:0;s:8:"imagecat";i:0;s:7:"picname";s:15:"让每一个人";s:10:"subpicname";s:24:"都受益于分子诊断";s:13:"bottom_status";i:0;}

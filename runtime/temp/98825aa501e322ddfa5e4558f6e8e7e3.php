@@ -1,4 +1,4 @@
-<?php /*a:2:{s:82:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_tank.html";i:1677137020;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1676902773;}*/ ?>
+<?php /*a:2:{s:82:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent_tank.html";i:1677137020;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678254309;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,7 +20,8 @@
 		<div class="header ny-header">
 			<div class="core">
 				<div class="logo">
-					<a href="index.html"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a>
+					<!-- <a href="index.html"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a> -->
+					<a href="/"><img src="<?php echo config('web_site_logo'); ?>" alt=""></a>
 				</div>
 				
 				<div class="nav">
