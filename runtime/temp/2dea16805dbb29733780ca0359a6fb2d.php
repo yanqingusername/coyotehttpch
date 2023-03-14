@@ -1,4 +1,4 @@
-<?php /*a:2:{s:77:"/Applications/phpstudy/coyotehttpch/application/index/view/index/reagent.html";i:1633945880;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678254309;}*/ ?>
+<?php /*a:2:{s:83:"/Applications/phpstudy/coyotehttpch/application/index/view/index/join_position.html";i:1678774419;s:70:"/Applications/phpstudy/coyotehttpch/application/index/view/layout.html";i:1678254309;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -85,109 +85,195 @@
 		<!-- 内页头部 结束 -->
  
 		
-		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>);">
+		<div class="ny-banner color-495877" style="background-image: url(<?php echo htmlentities($cate['imagepath']); ?>)">
 			<div class="core">
 				<div class="banner-en font18 big-en">
 					<i></i>
 					<span><?php echo htmlentities($cate['subpicname']); ?></span>
 				</div>
-
+		
 				<h3 class="font46 font-bold line-height-1em"><?php echo htmlentities($cate['picname']); ?></h3>
-				
-				<div class="ny-banner-text">
+		
+				<div class="banner-text">
 					<?php echo $cate['description']; ?>
 				</div>
 			</div>
 		</div>
 		
-		<div class="reagent">
+		
+		<div class="padding-t120 padding-b100">
 			<div class="core">
-				<div class="reagent-section1 wow bounceInUp">
-					<div class="index-tit">
-						<h3><?php echo htmlentities($reagent['title']); ?></h3>
-						<p>
-							<i></i>
-							<span><?php echo htmlentities($reagent['entitle']); ?></span>
-							<i></i>
-						</p>
+				<div class="index-tit">
+					<h3>查看所有职位</h3>
+					<p>
+						<i></i>
+						<span>View all positions</span>
+						<i></i>
+					</p>
+
+					<a href="https://s.xinrenxinshi.com/recruitGate/home#/ey=0ebdb2058b45766a8f15cca9c239584480c56d" target="_blank">
+						<div style="margin-top: 40px;display: flex;align-items: center;justify-content: center;">
+							<img src="/kayoudi/img/join_position_img.png" alt=""/>
+							<!-- <h3 style="font-size: 40px;letter-spacing: 0.2em;margin-bottom: 0px;color: #797F9C;padding-left: 0.2em;border: 1px solid #C8004B;">点击投递简历</h3> -->
+						</div>
+					</a>
+				</div>
+				
+				<form action="" method="get">
+				<div class="joinDetail-search" style="margin-top:80px;">
+					<div class="jsearch-item jsearch-type">
+						<div class="jsearch-input">
+							<i style="background-image: url(/kayoudi/img/join/bag.png)"></i>
+							<p>全部</p>
+							<i class="arrow"></i>
+						</div>
+						<input type="hidden" name="positioncate" value="" id="positioncate">
+						<input type="hidden" name="province" value="" id="province">
+						<input type="hidden" name="city" value="" id="city">
+						<input type="hidden" name="qu" value="" id="qu">
+						<ul class="sel-list">
+							<li data-positioncate="0">全部</li>
+							<?php if(is_array($positioncate) || $positioncate instanceof \think\Collection || $positioncate instanceof \think\Paginator): $i = 0; $__LIST__ = $positioncate;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+								<li data-positioncate="<?php echo htmlentities($item['id']); ?>"><?php echo htmlentities($item['title']); ?></li>
+							<?php endforeach; endif; else: echo "" ;endif; ?>
+						</ul>
 					</div>
-					
-					<div class="reagent-section1-con swiper-container">
-						<div class="swiper-wrapper">
-							<?php if(is_array($reagentdata) || $reagentdata instanceof \think\Collection || $reagentdata instanceof \think\Paginator): $i = 0; $__LIST__ = $reagentdata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-							<div class="swiper-slide">
-								<div class="reagent-proitem">
-									<a href="<?php echo url('reagent_detail',['id'=>$item['id']]); ?>">
-										<div class="reagent-proitem-img">
-											<img src="<?php echo htmlentities($item['design_path']); ?>" alt="">
-										</div>
-										<div class="reagent-proitem-kit">
-											<img src="<?php echo htmlentities($item['thumb_path']); ?>" alt="">
-										</div>
-										<div class="reagent-proitem-p">
-											<?php echo htmlentities($item['title']); if($item['test_method']): ?>（<?php echo htmlentities($item['test_method']); ?>）<?php endif; ?>
-										</div>
-									</a>
+					<div class="jsearch-item jsearch-city">
+						<div class="jsearch-input">
+							<i style="background-image: url(/kayoudi/img/join/add.png)"></i>
+							<p>所在城市</p>
+							<i class="arrow"></i>
+						</div>
+						
+						<div class="placePopup_sel_distpicker">
+							<div id="distpicker" data-toggle="distpicker">
+								<div class="form-group">
+									<select class="form-control" id="provinceInput"></select>
+								</div>
+								<div class="form-group">
+									<select class="form-control" id="cityInput"></select>
+								</div>
+								<div class="form-group">
+									<select class="form-control" id="districtInput"></select>
 								</div>
 							</div>
-							<?php endforeach; endif; else: echo "" ;endif; ?>
 						</div>
 					</div>
+					<button type="submit" ></button>
 				</div>
-				<script>
-					var swiper = new Swiper('.reagent-section1-con', {
-						slidesPerView: 4,
-						spaceBetween: 20,
-						slidesPerGroup: 1,
-						loop: true,
-						loopFillGroupWithBlank: true,
-						autoplay: {
-							delay: 3000,
-							disableOnInteraction: false,
-						},
-					});
-				</script>
+				</form>
 				
-				<div class="index1-item wow bounceInUp">
-					<div class="index1-img">
-						<img src="<?php echo htmlentities($reagent['image_path2']); ?>" alt="">
-					</div>
-					
-					<div class="index1-text">
-						<div class="index1-tit">
-							<i></i>
-							<p><?php echo htmlentities($reagent['entitle2']); ?></p>
+				<div class="job-list">
+					<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+					<div class="job-item">
+						<i></i>
+						<div class="job-context">
+							<h4><?php echo htmlentities($item['catename']); ?></h4>
+							<h3><?php echo htmlentities($item['title']); ?></h3>
+							<div class="job-text job-text1">
+								<p><?php echo htmlentities($item['content']); ?></p>
+							</div>
+							<div class="job-text job-text2">
+								<?php echo $item['duty']; ?>
+							</div>
 						</div>
-						<h3><?php echo htmlentities($reagent['title2']); ?></h3>
-						<div class="index1-p">
-							<?php echo htmlentities($reagent['content2']); ?>
-						</div>
-						
-						<a class="index-more" href="<?php echo url('reagent_research'); ?>"><span>进一步了解</span><em></em></a>
 					</div>
+					<?php endforeach; endif; else: echo "" ;endif; ?>
+				</div>
+				 
+				<div class="news-page">
+					<a class="page-prev" href="<?php echo $list->url($page-1); ?>"></a>
+					<a class="page-next" href="<?php echo $list->url( $page<$list->lastPage()?$page+1:$list->lastPage() ); ?>"></a>
 				</div>
 				
-				
-				<div class="index1-item wow bounceInUp">
-					<div class="index1-text">
-						<div class="index1-tit">
-							<i></i>
-							<p><?php echo htmlentities($reagent['entitle3']); ?></p>
-						</div>
-						<h3><?php echo htmlentities($reagent['title3']); ?></h3>
-						<div class="index1-p">
-							<?php echo htmlentities($reagent['content3']); ?>
-						</div>
-						
-						<a class="index-more" href="<?php echo url('reagent_food'); ?>"><span>进一步了解</span><em></em></a>
-					</div>
-					<div class="index1-img">
-						<img src="<?php echo htmlentities($reagent['image_path3']); ?>" alt="">
-					</div>
-				</div>
 			</div>
 		</div>
-	  
+		
+		 
+		
+		
+		<script src="/kayoudi/js/distpicker.data.js"></script>
+		<script src="/kayoudi/js/distpicker.js"></script>
+		
+		<script>
+			$("#distpicker").distpicker({
+				autoSelect: false,
+			});
+			$(function() {
+				$(".job-list .job-item").hover(function() {
+					$(this).stop().addClass("active").siblings().stop().removeClass("active")
+					$(this).find(".job-text2").stop().slideDown()
+					$(this).siblings().find(".job-text2").stop().slideUp()
+					$(this).find(".job-text1").stop().slideUp()
+					$(this).siblings().find(".job-text1").stop().slideDown()
+				})
+				
+				
+				$(document).click(function() {
+					$(".jsearch-type .sel-list").stop().hide();
+					$(".placePopup_sel_distpicker").stop().hide();
+				});
+				
+				
+				$(".jsearch-type .jsearch-input").click(function(e){
+					e.stopPropagation();
+					$(".jsearch-type .sel-list").stop().toggle();
+					$(".placePopup_sel_distpicker").stop().hide();
+				})
+				$(".jsearch-type .sel-list li").click(function(e){
+					e.stopPropagation();
+					let v = $(this).text()
+					let c = $(this).data('positioncate')
+		 
+					$(".jsearch-type .jsearch-input p").text(v)
+					$("#positioncate").val(c)
+					$(".jsearch-type .sel-list").stop().hide();
+				})
+				
+				
+				$("#provinceInput").change(function() {
+					var province = $("#provinceInput").val();
+					var code = $(this).find("option:selected").data('code');
+					$("#province").val(code)
+					$("#city").val('')
+					$("#qu").val('')
+					if (province) {
+						$(".jsearch-city .jsearch-input p").text(province);
+					} else{
+						$(".jsearch-city .jsearch-input p").text('所在城市');
+					}
+				})
+				$("#cityInput").change(function() {
+					var province = $("#provinceInput").val();
+					var city = $("#cityInput").val();
+					var code = $(this).find("option:selected").data('code');
+					$("#city").val(code)
+					$("#qu").val('')
+					$(".jsearch-city .jsearch-input p").text(province + '/' + city);
+				})
+				$("#districtInput").change(function() {
+					var province = $("#provinceInput").val();
+					var city = $("#cityInput").val();
+					var district = $("#districtInput").val();
+					var code = $(this).find("option:selected").data('code');
+					$("#qu").val(code)
+
+					$(".jsearch-city .jsearch-input p").text(province + '/' + city + '/' + district);
+				})
+				
+				$(".jsearch-city .jsearch-input").click(function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					$(".placePopup_sel_distpicker").toggle();
+					$(".jsearch-type .sel-list").stop().hide();
+				})
+				
+				$(".placePopup_sel_distpicker").click(function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+				})
+			})
+		</script>  
 
 		<div class="footer padding-t115 padding-b140">
 			<div class="core">
