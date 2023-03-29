@@ -34,7 +34,13 @@
 						{volist name="menu" id="item"}
 							<div class="nav-item {if $item.active}active{/if}">
 								<p>
-									<a href="{:url($item['url'])}">{$item.catname}</a>
+									{if $item['id'] == 70}
+										<!-- <a href="https://s.xinrenxinshi.com/recruitGate/home#/ey=0ebdb2058b45766a8f15cca9c239584480c56d" target="_blank">{$item.catname}</a> -->
+										<a href="{$item['url']}" target="_blank">{$item.catname}</a> 
+									{/if}
+									{if $item['id'] != 70}
+										<a href="{:url($item['url'])}">{$item.catname}</a>
+									{/if}
 									{if $item['sub']}
 									<i></i>
 									{/if}
@@ -303,7 +309,13 @@
 							<p>{:config('web_site_icp')}</p>
 							<p>
 								{volist name="bottom_menu" id="item"}
-									<a href="{:url($item['url'])}">{$item.catname}</a>
+									{if $item['id'] == 70}
+										<!-- <a href="https://s.xinrenxinshi.com/recruitGate/home#/ey=0ebdb2058b45766a8f15cca9c239584480c56d" target="_blank">{$item.catname}</a> -->
+										<a href="{$item['url']}" target="_blank">{$item.catname}</a> 
+									{/if}
+									{if $item['id'] != 70}
+										<a href="{:url($item['url'])}">{$item.catname}</a>
+									{/if}
 									{if count($bottom_menu) != $key+1}
 									<em>/</em>
 									{/if}

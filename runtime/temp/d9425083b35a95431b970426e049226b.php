@@ -1,4 +1,4 @@
-<?php /*a:1:{s:75:"/Applications/phpstudy/coyotehttpch/application/index/view/index/index.html";i:1676902766;}*/ ?>
+<?php /*a:1:{s:75:"/Applications/phpstudy/coyotehttpch/application/index/view/index/index.html";i:1679993317;}*/ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -35,8 +35,11 @@
 						<?php if(is_array($menu) || $menu instanceof \think\Collection || $menu instanceof \think\Paginator): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
 							<div class="nav-item <?php if($item['active']): ?>active<?php endif; ?>">
 								<p>
-									<a href="<?php echo url($item['url']); ?>"><?php echo htmlentities($item['catname']); ?></a>
-									<?php if($item['sub']): ?>
+									<?php if($item['id'] == 70): ?>
+										<a href="https://s.xinrenxinshi.com/recruitGate/home#/ey=0ebdb2058b45766a8f15cca9c239584480c56d" target="_blank"><?php echo htmlentities($item['catname']); ?></a>
+									<?php endif; if($item['id'] != 70): ?>
+										<a href="<?php echo url($item['url']); ?>"><?php echo htmlentities($item['catname']); ?></a>
+									<?php endif; if($item['sub']): ?>
 									<i></i>
 									<?php endif; ?>
 								</p>

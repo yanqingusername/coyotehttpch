@@ -67,11 +67,11 @@
 	display: flex;
 	font-size: 20px;
 	padding-top: 16px;
-	margin-left: 80px;
+	margin-left: 60px;
 }
 
 .nav-item {
-	margin-right: 39px;
+	margin-right: 36px;
 }
 
 .nav-item:last-of-type {
